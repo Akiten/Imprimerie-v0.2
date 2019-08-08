@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Client" representedClassName=".Client" syncable="YES" codeGenerationType="category">
+        <attribute name="client" attributeType="String" syncable="YES"/>
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facturation" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="reglements" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="clientParutions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Parution" inverseName="parutionClient" inverseEntity="Parution" syncable="YES"/>
+    </entity>
+    <entity name="Commande" representedClassName=".Commande" syncable="YES" codeGenerationType="category">
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fournisseur" attributeType="String" syncable="YES"/>
+        <attribute name="montant" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="reglements" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="commandeFournisseur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fournisseur" inverseName="fournisseurCommandes" inverseEntity="Fournisseur" syncable="YES"/>
+    </entity>
+    <entity name="Consommable" representedClassName=".Consommable" syncable="YES" codeGenerationType="category">
+        <attribute name="article" attributeType="String" syncable="YES"/>
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="conditionnement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pxAchat" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pxRevient" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pxVente" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unite" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="EtatDeBesoin" representedClassName=".EtatDeBesoin" syncable="YES" codeGenerationType="category">
+        <attribute name="beneficiaire" attributeType="String" syncable="YES"/>
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="demandeur" attributeType="String" syncable="YES"/>
+        <attribute name="designation" attributeType="String" syncable="YES"/>
+        <attribute name="mtDecaisse" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mtDemande" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="demandeurBeneficiaire" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Salarie" inverseName="salarieEBBeneficiaires" inverseEntity="Salarie" syncable="YES"/>
+        <relationship name="demandeurSalarie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Salarie" inverseName="salarieEBDemandeurs" inverseEntity="Salarie" syncable="YES"/>
+    </entity>
+    <entity name="Fournisseur" representedClassName=".Fournisseur" syncable="YES" codeGenerationType="category">
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facturation" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fournisseur" attributeType="String" syncable="YES"/>
+        <attribute name="reglements" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="fournisseurCommandes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Commande" inverseName="commandeFournisseur" inverseEntity="Commande" syncable="YES"/>
+    </entity>
+    <entity name="JourTravaille" representedClassName=".JourTravaille" syncable="YES" codeGenerationType="category">
+        <attribute name="annee" attributeType="String" minValueString="4" maxValueString="4" syncable="YES"/>
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nbJours" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nbJoursFeries" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nbJoursOuvres" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MasseSalariale" representedClassName=".MasseSalariale" syncable="YES" codeGenerationType="category">
+        <attribute name="annee" attributeType="String" minValueString="4" maxValueString="4" syncable="YES"/>
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mensuelle" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Parution" representedClassName=".Parution" syncable="YES" codeGenerationType="category">
+        <attribute name="client" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="joursParution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parution" attributeType="String" syncable="YES"/>
+        <attribute name="pxVente4p" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pxVente8p" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pxVente16p" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pxVente24p" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="parutionClient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client" inverseName="clientParutions" inverseEntity="Client" syncable="YES"/>
+    </entity>
+    <entity name="Salarie" representedClassName=".Salarie" syncable="YES" codeGenerationType="category">
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="equipe" attributeType="String" syncable="YES"/>
+        <attribute name="fonction" attributeType="String" syncable="YES"/>
+        <attribute name="netMensuel" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nom" attributeType="String" syncable="YES"/>
+        <attribute name="poste" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prenom" attributeType="String" syncable="YES"/>
+        <attribute name="salarie" attributeType="String" syncable="YES"/>
+        <attribute name="service" attributeType="String" syncable="YES"/>
+        <relationship name="salarieEBBeneficiaires" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EtatDeBesoin" inverseName="demandeurBeneficiaire" inverseEntity="EtatDeBesoin" syncable="YES"/>
+        <relationship name="salarieEBDemandeurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EtatDeBesoin" inverseName="demandeurSalarie" inverseEntity="EtatDeBesoin" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Client" positionX="95.19140625" positionY="102.2734375" width="128" height="118"/>
+        <element name="Consommable" positionX="-55.10546875" positionY="96.328125" width="128" height="150"/>
+        <element name="Fournisseur" positionX="100.1328125" positionY="266.48828125" width="128" height="120"/>
+        <element name="JourTravaille" positionX="-51.828125" positionY="386.17578125" width="128" height="120"/>
+        <element name="MasseSalariale" positionX="-54.41796875" positionY="271.93359375" width="128" height="90"/>
+        <element name="Parution" positionX="262.6875" positionY="102" width="128" height="178"/>
+        <element name="Salarie" positionX="91.97265625" positionY="446.83203125" width="128" height="208"/>
+        <element name="Commande" positionX="262.4453125" positionY="330.2421875" width="128" height="135"/>
+        <element name="EtatDeBesoin" positionX="294.92578125" positionY="477.68359375" width="128" height="180"/>
+    </elements>
+</model>

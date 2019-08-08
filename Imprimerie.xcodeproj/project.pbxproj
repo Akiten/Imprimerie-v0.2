@@ -7,22 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041DCC1A22F6958100AB68A6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DCC1922F6958100AB68A6 /* Client.swift */; };
+		041DCC1D22F695AC00AB68A6 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DCC1B22F695AC00AB68A6 /* ClientsViewController.swift */; };
+		041DCC1E22F695AC00AB68A6 /* ClientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DCC1C22F695AC00AB68A6 /* ClientsViewController.xib */; };
+		041DCC2122F696F400AB68A6 /* ConsommablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DCC1F22F696F400AB68A6 /* ConsommablesViewController.swift */; };
+		041DCC2222F696F400AB68A6 /* ConsommablesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DCC2022F696F400AB68A6 /* ConsommablesViewController.xib */; };
+		041DCC2422F6993300AB68A6 /* Consommable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DCC2322F6993300AB68A6 /* Consommable.swift */; };
 		0430001D22F5131B00A54D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430001C22F5131B00A54D6E /* AppDelegate.swift */; };
 		0430001F22F5131B00A54D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430001E22F5131B00A54D6E /* ViewController.swift */; };
-		0430002222F5131B00A54D6E /* Imprimerie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0430002022F5131B00A54D6E /* Imprimerie.xcdatamodeld */; };
 		0430002422F5131B00A54D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430002322F5131B00A54D6E /* Assets.xcassets */; };
 		0430002722F5131B00A54D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0430002522F5131B00A54D6E /* Main.storyboard */; };
+		0430003422F5174100A54D6E /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430003322F5174100A54D6E /* WindowController.swift */; };
+		0430003622F51A2800A54D6E /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430003522F51A2800A54D6E /* MainWindow.swift */; };
+		0430003E22F5381200A54D6E /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430003D22F5381200A54D6E /* OutlineViewController.swift */; };
+		0430004022F53B4200A54D6E /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430003F22F53B4200A54D6E /* OutlineView.swift */; };
+		0442B26C22F932660051D91B /* MasseSalariale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442B26B22F932660051D91B /* MasseSalariale.swift */; };
+		0442B26F22F934E70051D91B /* MassesSalarialesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442B26D22F934E70051D91B /* MassesSalarialesViewController.swift */; };
+		0442B27022F934E70051D91B /* MassesSalarialesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0442B26E22F934E70051D91B /* MassesSalarialesViewController.xib */; };
+		047B029022FBE98D0074585E /* Commande.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B028F22FBE98D0074585E /* Commande.swift */; };
+		047B029C22FBEF560074585E /* CommandesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B029A22FBEF560074585E /* CommandesViewController.swift */; };
+		047B029D22FBEF560074585E /* CommandesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B029B22FBEF560074585E /* CommandesViewController.xib */; };
+		047B029F22FC08240074585E /* EtatDeBesoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B029E22FC08240074585E /* EtatDeBesoin.swift */; };
+		047B02A222FC0C730074585E /* EtatDeBesoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B02A022FC0C730074585E /* EtatDeBesoinViewController.swift */; };
+		047B02A322FC0C730074585E /* EtatDeBesoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047B02A122FC0C730074585E /* EtatDeBesoinViewController.xib */; };
+		0495D42922FA82170026A088 /* Fournisseur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495D42822FA82170026A088 /* Fournisseur.swift */; };
+		0495D42C22FA826A0026A088 /* FournisseursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495D42A22FA826A0026A088 /* FournisseursViewController.swift */; };
+		0495D42D22FA826A0026A088 /* FournisseursViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495D42B22FA826A0026A088 /* FournisseursViewController.xib */; };
+		0495D42F22FA92B80026A088 /* Salarie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495D42E22FA92B70026A088 /* Salarie.swift */; };
+		0495D43222FABB6C0026A088 /* SalariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495D43022FABB6C0026A088 /* SalariesViewController.swift */; };
+		0495D43322FABB6C0026A088 /* SalariesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495D43122FABB6C0026A088 /* SalariesViewController.xib */; };
+		049C244B22F8026500FF3F0A /* JourTravaille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C244A22F8026500FF3F0A /* JourTravaille.swift */; };
+		049C244E22F8032400FF3F0A /* JoursTravaillesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */; };
+		049C244F22F8032400FF3F0A /* JoursTravaillesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */; };
+		04A9A29922F9498C001647EE /* Parution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9A29822F9498C001647EE /* Parution.swift */; };
+		04A9A29C22F949D5001647EE /* ParutionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9A29A22F949D5001647EE /* ParutionsViewController.swift */; };
+		04A9A29D22F949D5001647EE /* ParutionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A9A29B22F949D5001647EE /* ParutionsViewController.xib */; };
+		04B7E27F22F6A69B005870FF /* Imprimerie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04B7E27D22F6A69B005870FF /* Imprimerie.xcdatamodeld */; };
+		04B7E28122F6DB51005870FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7E28022F6DB51005870FF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041DCC1922F6958100AB68A6 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		041DCC1B22F695AC00AB68A6 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
+		041DCC1C22F695AC00AB68A6 /* ClientsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClientsViewController.xib; sourceTree = "<group>"; };
+		041DCC1F22F696F400AB68A6 /* ConsommablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsommablesViewController.swift; sourceTree = "<group>"; };
+		041DCC2022F696F400AB68A6 /* ConsommablesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsommablesViewController.xib; sourceTree = "<group>"; };
+		041DCC2322F6993300AB68A6 /* Consommable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consommable.swift; sourceTree = "<group>"; };
 		0430001922F5131B00A54D6E /* Imprimerie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imprimerie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0430001C22F5131B00A54D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0430001E22F5131B00A54D6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0430002122F5131B00A54D6E /* Imprimerie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Imprimerie.xcdatamodel; sourceTree = "<group>"; };
 		0430002322F5131B00A54D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0430002622F5131B00A54D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0430002822F5131B00A54D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0430002922F5131B00A54D6E /* Imprimerie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Imprimerie.entitlements; sourceTree = "<group>"; };
+		0430003322F5174100A54D6E /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		0430003522F51A2800A54D6E /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		0430003D22F5381200A54D6E /* OutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		0430003F22F53B4200A54D6E /* OutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineView.swift; sourceTree = "<group>"; };
+		0442B26B22F932660051D91B /* MasseSalariale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasseSalariale.swift; sourceTree = "<group>"; };
+		0442B26D22F934E70051D91B /* MassesSalarialesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassesSalarialesViewController.swift; sourceTree = "<group>"; };
+		0442B26E22F934E70051D91B /* MassesSalarialesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MassesSalarialesViewController.xib; sourceTree = "<group>"; };
+		047B028F22FBE98D0074585E /* Commande.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commande.swift; sourceTree = "<group>"; };
+		047B029A22FBEF560074585E /* CommandesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandesViewController.swift; sourceTree = "<group>"; };
+		047B029B22FBEF560074585E /* CommandesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommandesViewController.xib; sourceTree = "<group>"; };
+		047B029E22FC08240074585E /* EtatDeBesoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatDeBesoin.swift; sourceTree = "<group>"; };
+		047B02A022FC0C730074585E /* EtatDeBesoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatDeBesoinViewController.swift; sourceTree = "<group>"; };
+		047B02A122FC0C730074585E /* EtatDeBesoinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EtatDeBesoinViewController.xib; sourceTree = "<group>"; };
+		0495D42822FA82170026A088 /* Fournisseur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fournisseur.swift; sourceTree = "<group>"; };
+		0495D42A22FA826A0026A088 /* FournisseursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FournisseursViewController.swift; sourceTree = "<group>"; };
+		0495D42B22FA826A0026A088 /* FournisseursViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FournisseursViewController.xib; sourceTree = "<group>"; };
+		0495D42E22FA92B70026A088 /* Salarie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salarie.swift; sourceTree = "<group>"; };
+		0495D43022FABB6C0026A088 /* SalariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalariesViewController.swift; sourceTree = "<group>"; };
+		0495D43122FABB6C0026A088 /* SalariesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalariesViewController.xib; sourceTree = "<group>"; };
+		049C244A22F8026500FF3F0A /* JourTravaille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourTravaille.swift; sourceTree = "<group>"; };
+		049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoursTravaillesViewController.swift; sourceTree = "<group>"; };
+		049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoursTravaillesViewController.xib; sourceTree = "<group>"; };
+		04A9A29822F9498C001647EE /* Parution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parution.swift; sourceTree = "<group>"; };
+		04A9A29A22F949D5001647EE /* ParutionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParutionsViewController.swift; sourceTree = "<group>"; };
+		04A9A29B22F949D5001647EE /* ParutionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParutionsViewController.xib; sourceTree = "<group>"; };
+		04B7E27E22F6A69B005870FF /* Imprimerie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Imprimerie.xcdatamodel; sourceTree = "<group>"; };
+		04B7E28022F6DB51005870FF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +107,7 @@
 				0430001A22F5131B00A54D6E /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		0430001A22F5131B00A54D6E /* Products */ = {
 			isa = PBXGroup;
@@ -55,15 +120,151 @@
 		0430001B22F5131B00A54D6E /* Imprimerie */ = {
 			isa = PBXGroup;
 			children = (
-				0430001C22F5131B00A54D6E /* AppDelegate.swift */,
-				0430001E22F5131B00A54D6E /* ViewController.swift */,
-				0430002322F5131B00A54D6E /* Assets.xcassets */,
-				0430002522F5131B00A54D6E /* Main.storyboard */,
-				0430002822F5131B00A54D6E /* Info.plist */,
-				0430002922F5131B00A54D6E /* Imprimerie.entitlements */,
-				0430002022F5131B00A54D6E /* Imprimerie.xcdatamodeld */,
+				0430003222F513AF00A54D6E /* Model */,
+				0430003122F5139200A54D6E /* View */,
+				0430003022F5137900A54D6E /* Controller */,
+				0430002F22F5132C00A54D6E /* Supporting Files */,
 			);
 			path = Imprimerie;
+			sourceTree = "<group>";
+		};
+		0430002F22F5132C00A54D6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04B7E28022F6DB51005870FF /* Extensions.swift */,
+				0430002322F5131B00A54D6E /* Assets.xcassets */,
+				0430002922F5131B00A54D6E /* Imprimerie.entitlements */,
+				0430002822F5131B00A54D6E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0430003022F5137900A54D6E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0430001C22F5131B00A54D6E /* AppDelegate.swift */,
+				0430003322F5174100A54D6E /* WindowController.swift */,
+				0430001E22F5131B00A54D6E /* ViewController.swift */,
+				0430003D22F5381200A54D6E /* OutlineViewController.swift */,
+				047B029922FBED2B0074585E /* Parametres */,
+				047B029822FBED170074585E /* Personnes */,
+				047B029722FBED0C0074585E /* Imprimerie */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0430003122F5139200A54D6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0430002522F5131B00A54D6E /* Main.storyboard */,
+				047B029622FBECEF0074585E /* Parametres */,
+				047B029522FBECDE0074585E /* Personnes */,
+				047B029422FBECD50074585E /* Imprimerie */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0430003222F513AF00A54D6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04B7E27D22F6A69B005870FF /* Imprimerie.xcdatamodeld */,
+				0430003522F51A2800A54D6E /* MainWindow.swift */,
+				0430003F22F53B4200A54D6E /* OutlineView.swift */,
+				047B029122FBEC510074585E /* Parametres */,
+				047B029222FBEC800074585E /* Personnes */,
+				047B029322FBEC9E0074585E /* Imprimerie */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		047B029122FBEC510074585E /* Parametres */ = {
+			isa = PBXGroup;
+			children = (
+				041DCC2322F6993300AB68A6 /* Consommable.swift */,
+				049C244A22F8026500FF3F0A /* JourTravaille.swift */,
+				0442B26B22F932660051D91B /* MasseSalariale.swift */,
+				04A9A29822F9498C001647EE /* Parution.swift */,
+			);
+			path = Parametres;
+			sourceTree = "<group>";
+		};
+		047B029222FBEC800074585E /* Personnes */ = {
+			isa = PBXGroup;
+			children = (
+				041DCC1922F6958100AB68A6 /* Client.swift */,
+				0495D42822FA82170026A088 /* Fournisseur.swift */,
+				0495D42E22FA92B70026A088 /* Salarie.swift */,
+			);
+			path = Personnes;
+			sourceTree = "<group>";
+		};
+		047B029322FBEC9E0074585E /* Imprimerie */ = {
+			isa = PBXGroup;
+			children = (
+				047B028F22FBE98D0074585E /* Commande.swift */,
+				047B029E22FC08240074585E /* EtatDeBesoin.swift */,
+			);
+			path = Imprimerie;
+			sourceTree = "<group>";
+		};
+		047B029422FBECD50074585E /* Imprimerie */ = {
+			isa = PBXGroup;
+			children = (
+				047B029B22FBEF560074585E /* CommandesViewController.xib */,
+				047B02A122FC0C730074585E /* EtatDeBesoinViewController.xib */,
+			);
+			path = Imprimerie;
+			sourceTree = "<group>";
+		};
+		047B029522FBECDE0074585E /* Personnes */ = {
+			isa = PBXGroup;
+			children = (
+				041DCC1C22F695AC00AB68A6 /* ClientsViewController.xib */,
+				0495D42B22FA826A0026A088 /* FournisseursViewController.xib */,
+				0495D43122FABB6C0026A088 /* SalariesViewController.xib */,
+			);
+			path = Personnes;
+			sourceTree = "<group>";
+		};
+		047B029622FBECEF0074585E /* Parametres */ = {
+			isa = PBXGroup;
+			children = (
+				041DCC2022F696F400AB68A6 /* ConsommablesViewController.xib */,
+				049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */,
+				0442B26E22F934E70051D91B /* MassesSalarialesViewController.xib */,
+				04A9A29B22F949D5001647EE /* ParutionsViewController.xib */,
+			);
+			path = Parametres;
+			sourceTree = "<group>";
+		};
+		047B029722FBED0C0074585E /* Imprimerie */ = {
+			isa = PBXGroup;
+			children = (
+				047B029A22FBEF560074585E /* CommandesViewController.swift */,
+				047B02A022FC0C730074585E /* EtatDeBesoinViewController.swift */,
+			);
+			path = Imprimerie;
+			sourceTree = "<group>";
+		};
+		047B029822FBED170074585E /* Personnes */ = {
+			isa = PBXGroup;
+			children = (
+				041DCC1B22F695AC00AB68A6 /* ClientsViewController.swift */,
+				0495D42A22FA826A0026A088 /* FournisseursViewController.swift */,
+				0495D43022FABB6C0026A088 /* SalariesViewController.swift */,
+			);
+			path = Personnes;
+			sourceTree = "<group>";
+		};
+		047B029922FBED2B0074585E /* Parametres */ = {
+			isa = PBXGroup;
+			children = (
+				041DCC1F22F696F400AB68A6 /* ConsommablesViewController.swift */,
+				049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */,
+				0442B26D22F934E70051D91B /* MassesSalarialesViewController.swift */,
+				04A9A29A22F949D5001647EE /* ParutionsViewController.swift */,
+			);
+			path = Parametres;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +299,11 @@
 				TargetAttributes = {
 					0430001822F5131A00A54D6E = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,8 +330,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047B029D22FBEF560074585E /* CommandesViewController.xib in Resources */,
+				041DCC1E22F695AC00AB68A6 /* ClientsViewController.xib in Resources */,
+				0495D43322FABB6C0026A088 /* SalariesViewController.xib in Resources */,
+				041DCC2222F696F400AB68A6 /* ConsommablesViewController.xib in Resources */,
+				04A9A29D22F949D5001647EE /* ParutionsViewController.xib in Resources */,
 				0430002422F5131B00A54D6E /* Assets.xcassets in Resources */,
+				0442B27022F934E70051D91B /* MassesSalarialesViewController.xib in Resources */,
 				0430002722F5131B00A54D6E /* Main.storyboard in Resources */,
+				0495D42D22FA826A0026A088 /* FournisseursViewController.xib in Resources */,
+				049C244F22F8032400FF3F0A /* JoursTravaillesViewController.xib in Resources */,
+				047B02A322FC0C730074585E /* EtatDeBesoinViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,9 +351,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A9A29922F9498C001647EE /* Parution.swift in Sources */,
+				041DCC1D22F695AC00AB68A6 /* ClientsViewController.swift in Sources */,
+				04B7E27F22F6A69B005870FF /* Imprimerie.xcdatamodeld in Sources */,
 				0430001F22F5131B00A54D6E /* ViewController.swift in Sources */,
-				0430002222F5131B00A54D6E /* Imprimerie.xcdatamodeld in Sources */,
+				041DCC2122F696F400AB68A6 /* ConsommablesViewController.swift in Sources */,
+				0442B26C22F932660051D91B /* MasseSalariale.swift in Sources */,
+				0495D42F22FA92B80026A088 /* Salarie.swift in Sources */,
+				0495D42922FA82170026A088 /* Fournisseur.swift in Sources */,
+				0430003E22F5381200A54D6E /* OutlineViewController.swift in Sources */,
+				049C244E22F8032400FF3F0A /* JoursTravaillesViewController.swift in Sources */,
+				04A9A29C22F949D5001647EE /* ParutionsViewController.swift in Sources */,
+				049C244B22F8026500FF3F0A /* JourTravaille.swift in Sources */,
+				047B02A222FC0C730074585E /* EtatDeBesoinViewController.swift in Sources */,
+				0430003422F5174100A54D6E /* WindowController.swift in Sources */,
+				0430003622F51A2800A54D6E /* MainWindow.swift in Sources */,
+				047B029C22FBEF560074585E /* CommandesViewController.swift in Sources */,
+				047B029022FBE98D0074585E /* Commande.swift in Sources */,
+				04B7E28122F6DB51005870FF /* Extensions.swift in Sources */,
+				0442B26F22F934E70051D91B /* MassesSalarialesViewController.swift in Sources */,
+				041DCC2422F6993300AB68A6 /* Consommable.swift in Sources */,
+				047B029F22FC08240074585E /* EtatDeBesoin.swift in Sources */,
+				0495D42C22FA826A0026A088 /* FournisseursViewController.swift in Sources */,
 				0430001D22F5131B00A54D6E /* AppDelegate.swift in Sources */,
+				041DCC1A22F6958100AB68A6 /* Client.swift in Sources */,
+				0495D43222FABB6C0026A088 /* SalariesViewController.swift in Sources */,
+				0430004022F53B4200A54D6E /* OutlineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +513,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Imprimerie/Imprimerie.entitlements;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = "Imprimerie/Supporting Files/Imprimerie.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UCE73LLT8L;
-				INFOPLIST_FILE = Imprimerie/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Imprimerie/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -294,11 +533,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Imprimerie/Imprimerie.entitlements;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = "Imprimerie/Supporting Files/Imprimerie.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = UCE73LLT8L;
-				INFOPLIST_FILE = Imprimerie/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Imprimerie/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -333,12 +573,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0430002022F5131B00A54D6E /* Imprimerie.xcdatamodeld */ = {
+		04B7E27D22F6A69B005870FF /* Imprimerie.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0430002122F5131B00A54D6E /* Imprimerie.xcdatamodel */,
+				04B7E27E22F6A69B005870FF /* Imprimerie.xcdatamodel */,
 			);
-			currentVersion = 0430002122F5131B00A54D6E /* Imprimerie.xcdatamodel */;
+			currentVersion = 04B7E27E22F6A69B005870FF /* Imprimerie.xcdatamodel */;
 			path = Imprimerie.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
