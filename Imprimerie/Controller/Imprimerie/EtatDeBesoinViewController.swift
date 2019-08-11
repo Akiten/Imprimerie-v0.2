@@ -19,7 +19,6 @@ class EtatDeBesoinViewController: NSViewController {
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
 
   // textFields
-  @IBOutlet weak var dateTextField: NSTextField!
   @IBOutlet weak var designationTextField: NSTextField!
   @IBOutlet weak var demandeurComboBox: NSComboBox!
   @IBOutlet weak var beneficiaireComboBox: NSComboBox!
@@ -27,12 +26,24 @@ class EtatDeBesoinViewController: NSViewController {
   @IBOutlet weak var mtDecaisseTextField: NSTextField!
   @IBOutlet weak var soldeTextField: NSTextField!
   @IBOutlet weak var commentaireTextField: NSTextField!
-  
-  // Init
+  @IBOutlet weak var dateDatePicker: NSDatePicker!
+
+  // Init datas
+  func initDataView() {
+    designationTextField.stringValue = ""
+    demandeurComboBox.stringValue = ""
+    mtDemandeTextField.stringValue = ""
+    mtDecaisseTextField.stringValue = ""
+    soldeTextField.stringValue = ""
+    commentaireTextField.stringValue = ""
+    dateDatePicker.locale = Locale(identifier: "FR_fr")
+    dateDatePicker.dateValue = Date()
+  }
+
+  // Init class data
   var etatsDeBesoins = EtatDeBesoin.all    // getDate from entity
 
   // MARK: - View Controller functions
-
   override func viewDidLoad() {
       super.viewDidLoad()
       // Do view setup here.
@@ -47,6 +58,9 @@ class EtatDeBesoinViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
+
+    // Init datas
+    initDataView()
   }
 
 }

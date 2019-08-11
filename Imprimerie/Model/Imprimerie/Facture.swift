@@ -1,24 +1,24 @@
 //
-//  Commande.swift
+//  Facture.swift
 //  Imprimerie
 //
-//  Created by MAC on 8/8/19.
+//  Created by MAC on 8/9/19.
 //  Copyright © 2019 MAC. All rights reserved.
 //
 
 import CoreData
 
-// MARK : - Commande class
-class Commande: NSManagedObject {
+// MARK : - Facture class
+class Facture: NSManagedObject {
   // Retrieve data
-  static var all: [Commande] {
-    let request: NSFetchRequest<Commande> = Commande.fetchRequest()
+  static var all: [Facture] {
+    let request: NSFetchRequest<Facture> = Facture.fetchRequest()
     request.sortDescriptors = [
       NSSortDescriptor(key: "date", ascending: true),
-      NSSortDescriptor(key: "fournisseur", ascending: true)
+      NSSortDescriptor(key: "client", ascending: true)
     ]
-    guard let commandes = try? AppDelegate.viewContext.fetch(request) else { return [] }
-    return commandes
+    guard let factures = try? AppDelegate.viewContext.fetch(request) else { return [] }
+    return factures
   }
 
   // Calculated fields
@@ -28,8 +28,9 @@ class Commande: NSManagedObject {
 
   // Count data
   static var count: Int {
-    let request: NSFetchRequest<Commande> = Commande.fetchRequest()
+    let request: NSFetchRequest<Facture> = Facture.fetchRequest()
     guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
     return count
   }
+  
 }

@@ -25,7 +25,16 @@ class FournisseursViewController: NSViewController {
   @IBOutlet weak var soldeTextField: NSTextField!
   @IBOutlet weak var commentaireTextField: NSTextField!
 
-  // Init
+  // Init datas
+  func initDataView() {
+    fournisseurTextField.stringValue = ""
+    facturationTextField.stringValue = ""
+    reglementsTextField.stringValue = ""
+    soldeTextField.stringValue = ""
+    commentaireTextField.stringValue = ""
+  }
+
+  // Init class data
   var fournisseurs = Fournisseur.all    // getDate from entity
 
   // MARK: - View Controller functions
@@ -43,6 +52,9 @@ class FournisseursViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
+
+    // Init datas
+    initDataView()
   }
 
 }

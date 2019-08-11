@@ -26,15 +26,24 @@ class JoursTravaillesViewController: NSViewController {
   @IBOutlet weak var nbJoursTravaiilesTextField: NSTextField!   // Calculated field
   @IBOutlet weak var commentaireTextField: NSTextField!
 
-  // Init
+  // Init datas
+  func initDataView() {
+    anneeTextField.stringValue = MainWindow.stringYear
+    nbJoursTextField.stringValue = ""
+    nbJoursOuvresTextField.stringValue = ""
+    nbJoursFeriesTextField.stringValue = ""
+    nbJoursTravaiilesTextField.stringValue = ""
+    commentaireTextField.stringValue = ""
+  }
+
+  // Init class data
   var joursTravailles = JourTravaille.all    // getDate from entity
 
   // MARK: - View Controller functions
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
-    
+  override func viewDidLoad() {
+      super.viewDidLoad()
+      // Do view setup here.
+  }
   override func viewWillAppear() {
     super.viewWillAppear()
 
@@ -44,6 +53,9 @@ class JoursTravaillesViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
+
+    // Init datas
+    initDataView()
   }
 
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0418203322FD1A2700EBBF33 /* Facture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418203222FD1A2700EBBF33 /* Facture.swift */; };
+		0418203622FD1B1E00EBBF33 /* FacturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418203422FD1B1E00EBBF33 /* FacturesViewController.swift */; };
+		0418203722FD1B1E00EBBF33 /* FacturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0418203522FD1B1E00EBBF33 /* FacturesViewController.xib */; };
 		041DCC1A22F6958100AB68A6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DCC1922F6958100AB68A6 /* Client.swift */; };
 		041DCC1D22F695AC00AB68A6 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DCC1B22F695AC00AB68A6 /* ClientsViewController.swift */; };
 		041DCC1E22F695AC00AB68A6 /* ClientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DCC1C22F695AC00AB68A6 /* ClientsViewController.xib */; };
@@ -47,6 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0418203222FD1A2700EBBF33 /* Facture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facture.swift; sourceTree = "<group>"; };
+		0418203422FD1B1E00EBBF33 /* FacturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturesViewController.swift; sourceTree = "<group>"; };
+		0418203522FD1B1E00EBBF33 /* FacturesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacturesViewController.xib; sourceTree = "<group>"; };
 		041DCC1922F6958100AB68A6 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		041DCC1B22F695AC00AB68A6 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
 		041DCC1C22F695AC00AB68A6 /* ClientsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClientsViewController.xib; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 			children = (
 				047B028F22FBE98D0074585E /* Commande.swift */,
 				047B029E22FC08240074585E /* EtatDeBesoin.swift */,
+				0418203222FD1A2700EBBF33 /* Facture.swift */,
 			);
 			path = Imprimerie;
 			sourceTree = "<group>";
@@ -212,6 +219,7 @@
 			children = (
 				047B029B22FBEF560074585E /* CommandesViewController.xib */,
 				047B02A122FC0C730074585E /* EtatDeBesoinViewController.xib */,
+				0418203522FD1B1E00EBBF33 /* FacturesViewController.xib */,
 			);
 			path = Imprimerie;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 			children = (
 				047B029A22FBEF560074585E /* CommandesViewController.swift */,
 				047B02A022FC0C730074585E /* EtatDeBesoinViewController.swift */,
+				0418203422FD1B1E00EBBF33 /* FacturesViewController.swift */,
 			);
 			path = Imprimerie;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 				04A9A29D22F949D5001647EE /* ParutionsViewController.xib in Resources */,
 				0430002422F5131B00A54D6E /* Assets.xcassets in Resources */,
 				0442B27022F934E70051D91B /* MassesSalarialesViewController.xib in Resources */,
+				0418203722FD1B1E00EBBF33 /* FacturesViewController.xib in Resources */,
 				0430002722F5131B00A54D6E /* Main.storyboard in Resources */,
 				0495D42D22FA826A0026A088 /* FournisseursViewController.xib in Resources */,
 				049C244F22F8032400FF3F0A /* JoursTravaillesViewController.xib in Resources */,
@@ -360,6 +370,7 @@
 				0495D42F22FA92B80026A088 /* Salarie.swift in Sources */,
 				0495D42922FA82170026A088 /* Fournisseur.swift in Sources */,
 				0430003E22F5381200A54D6E /* OutlineViewController.swift in Sources */,
+				0418203322FD1A2700EBBF33 /* Facture.swift in Sources */,
 				049C244E22F8032400FF3F0A /* JoursTravaillesViewController.swift in Sources */,
 				04A9A29C22F949D5001647EE /* ParutionsViewController.swift in Sources */,
 				049C244B22F8026500FF3F0A /* JourTravaille.swift in Sources */,
@@ -369,6 +380,7 @@
 				047B029C22FBEF560074585E /* CommandesViewController.swift in Sources */,
 				047B029022FBE98D0074585E /* Commande.swift in Sources */,
 				04B7E28122F6DB51005870FF /* Extensions.swift in Sources */,
+				0418203622FD1B1E00EBBF33 /* FacturesViewController.swift in Sources */,
 				0442B26F22F934E70051D91B /* MassesSalarialesViewController.swift in Sources */,
 				041DCC2422F6993300AB68A6 /* Consommable.swift in Sources */,
 				047B029F22FC08240074585E /* EtatDeBesoin.swift in Sources */,

@@ -18,7 +18,7 @@ class ViewController: NSViewController {
   var section = [Section]()   // Sections outlineView
   var outlineViewSelectedName = ""    // Item selected name
 
-  // Views declaration for outlineView change row to update dats
+  // Views declaration for outlineView change row to update data
   var consommablesViewController = ConsommablesViewController()
   var joursTravaillesViewController = JoursTravaillesViewController()
   var massesSalarialesViewController = MassesSalarialesViewController()
@@ -28,6 +28,7 @@ class ViewController: NSViewController {
   var salariesViewController = SalariesViewController()
   var commandesViewController = CommandesViewController()
   var etatsDeBesoinsViewController = EtatDeBesoinViewController()
+  var facturesViewController = FacturesViewController()
 
   // MARK: - Class functions
   override func viewDidLoad() {

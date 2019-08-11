@@ -26,4 +26,11 @@ class EtatDeBesoin: NSManagedObject {
   var annee: String { return date?.yearToString() ?? "" }
   var mois: String { return date?.monthToString() ?? "" }
   var solde: Double { return mtDemande - mtDecaisse}
+
+  // Count data
+  static var count: Int {
+    let request: NSFetchRequest<EtatDeBesoin> = EtatDeBesoin.fetchRequest()
+    guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
+    return count
+  }
 }

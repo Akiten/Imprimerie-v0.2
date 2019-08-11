@@ -20,4 +20,11 @@ class Client: NSManagedObject {
 
   // Calculated fields
   var solde: Double { return facturation - reglements}
+
+  // Count data
+  static var count: Int {
+    let request: NSFetchRequest<Client> = Client.fetchRequest()
+    guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
+    return count
+  }
 }

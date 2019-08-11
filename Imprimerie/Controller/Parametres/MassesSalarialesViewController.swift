@@ -27,7 +27,18 @@ class MassesSalarialesViewController: NSViewController {
   @IBOutlet weak var horaireTextField: NSTextField!
   @IBOutlet weak var commentaireTextField: NSTextField!
 
-  // Init
+  // Init datas
+  func initDataView() {
+    anneeTextField.stringValue = MainWindow.stringYear
+    mensuelleTextField.stringValue = ""
+    annuelleTextField.stringValue = ""
+    mensuelleMoyenneTextField.stringValue = ""
+    journaliereTextField.stringValue = ""
+    horaireTextField.stringValue = ""
+    commentaireTextField.stringValue = ""
+  }
+
+  // Init class data
   var massesSalariales = MasseSalariale.all    // getDate from entity
 
   // MARK: - View Controller functions
@@ -45,6 +56,9 @@ class MassesSalarialesViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
+
+    // Init datas
+    initDataView()
   }
 
 }

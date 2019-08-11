@@ -25,7 +25,16 @@ class ClientsViewController: NSViewController {
   @IBOutlet weak var soldeTextField: NSTextField!   // Calculated field
   @IBOutlet weak var commentaireTextField: NSTextField!
   
-  // Init
+  // Init datas
+  func initDataView() {
+    clientTextField.stringValue = ""
+    facturationTextField.stringValue = ""
+    reglementsTextField.stringValue = ""
+    soldeTextField.stringValue = ""
+    commentaireTextField.stringValue = ""
+  }
+
+  // Init class data
   var clients = Client.all    // getDate from entity
 
   // MARK: - View Controller functions
@@ -43,6 +52,9 @@ class ClientsViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
+
+    // Init datas
+    initDataView()
   }
 
 }

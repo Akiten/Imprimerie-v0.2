@@ -32,7 +32,23 @@ class SalariesViewController: NSViewController {
   @IBOutlet weak var posteComboBox: NSComboBox!
   @IBOutlet weak var equipeComboBox: NSComboBox!
 
-  // Init
+  // Init datas
+  func initDataView() {
+    salarieTextField.stringValue = ""
+    nomTextField.stringValue = ""
+    prenomTextField.stringValue = ""
+    netMensuelTextField.stringValue = ""
+    netMensuelMoyenTextField.stringValue = ""
+    netJournalierTextField.stringValue = ""
+    netHoraireTextField.stringValue = ""
+    serviceComboBox.stringValue = ""
+    fonctionComboBox.stringValue = ""
+    posteComboBox.stringValue = ""
+    equipeComboBox.stringValue = ""
+    commentaireTextField.stringValue = ""
+  }
+
+  // Init class data
   var salaries = Salarie.all    // getDate from entity
 
   // MARK: - View Controller functions
@@ -50,6 +66,10 @@ class SalariesViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
+
+    // Init datas
+    initDataView()
+
   }
 
 }

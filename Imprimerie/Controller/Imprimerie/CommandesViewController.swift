@@ -13,20 +13,32 @@ class CommandesViewController: NSViewController {
   // MARK: - Outlets
   // Views
   @IBOutlet weak var tableView: NSTableView!
-  
+
   // Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
 
   // textFields
-  @IBOutlet weak var dateTextField: NSTextField!
   @IBOutlet weak var fournisseurComboBox: NSComboBox!
   @IBOutlet weak var montantTextField: NSTextField!
   @IBOutlet weak var reglementsTextField: NSTextField!
   @IBOutlet weak var soldeTextField: NSTextField!
   @IBOutlet weak var commentaireTextField: NSTextField!
-  
-  // Init
+  @IBOutlet weak var designationTextField: NSTextField!
+  @IBOutlet weak var dateDatePicker: NSDatePicker!
+
+  // Init datas
+  func initDataView() {
+    fournisseurComboBox.stringValue = ""
+    montantTextField.stringValue = ""
+    reglementsTextField.stringValue = ""
+    soldeTextField.stringValue = ""
+    commentaireTextField.stringValue = ""
+    dateDatePicker.locale = Locale(identifier: "FR_fr")
+    dateDatePicker.dateValue = Date()
+  }
+
+  // Init class data
   var commandes = Commande.all    // getDate from entity
 
   // MARK: - View Controller functions
@@ -44,6 +56,9 @@ class CommandesViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
+
+    // Init datas
+    initDataView()
   }
 
 }
@@ -75,6 +90,7 @@ extension CommandesViewController: NSTableViewDelegate {
       case "reglements": textView?.string = String(commandes[row].reglements)
       case "solde": textView?.string = String(commandes[row].solde)
       case "commentaire": textView?.string = commandes[row].commentaire ?? ""
+      case "designation": textView?.string = commandes[row].designation ?? ""
       default: textView?.string = ""
       }
     }

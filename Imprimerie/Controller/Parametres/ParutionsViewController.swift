@@ -28,7 +28,19 @@ class ParutionsViewController: NSViewController {
   @IBOutlet weak var commentaireTextField: NSTextField!
   @IBOutlet weak var clientComboBox: NSComboBox!    // Select customer from customer entity
 
-  // Init
+  // Init datas
+  func initDataView() {
+    parutionTextField.stringValue = ""
+    joursParutionTextField.stringValue = ""
+    pxVente4pTextField.stringValue = ""
+    pxVente8pTextField.stringValue = ""
+    pxVente16pTextField.stringValue = ""
+    pxVente24pTextField.stringValue = ""
+    commentaireTextField.stringValue = ""
+    clientComboBox.stringValue = ""
+  }
+
+  // Init class data
   var parutions = Parution.all    // getDate from entity
 
   // MARK: - View Controller functions
@@ -44,8 +56,8 @@ class ParutionsViewController: NSViewController {
     tableView.dataSource = self
     tableView.delegate = self
 
-    // Load datas in tableView
-    tableView.reloadData()
+    // Init datas
+    initDataView()
   }
 
 }

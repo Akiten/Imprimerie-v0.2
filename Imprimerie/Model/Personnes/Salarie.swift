@@ -26,4 +26,11 @@ class Salarie: NSManagedObject {
   var netMensuelMoyen: Int { return Int((netMensuel * 13) / 12) }   // Mensuelle * 13 mois / 12 mois
   var netJournalier: Int { return Int(netMensuelMoyen / MainWindow.nbJoursTravaillesAnnee) }   // Par jour
   var netHoraire: Int { return Int(netJournalier / 8) }    // Horaire
+
+  // Count data
+  static var count: Int {
+    let request: NSFetchRequest<Salarie> = Salarie.fetchRequest()
+    guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
+    return count
+  }
 }

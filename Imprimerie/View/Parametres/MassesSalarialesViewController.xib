@@ -23,24 +23,24 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="603" height="418"/>
+            <rect key="frame" x="0.0" y="0.0" width="603" height="307"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView borderType="none" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3p-aq-apb">
-                    <rect key="frame" x="0.0" y="0.0" width="353" height="418"/>
+                    <rect key="frame" x="0.0" y="0.0" width="353" height="307"/>
                     <clipView key="contentView" id="Rbq-Xs-bE1">
-                        <rect key="frame" x="0.0" y="0.0" width="353" height="418"/>
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="307"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveName="masseSalarialeTableView" rowSizeStyle="automatic" headerView="hBG-iV-u7D" viewBased="YES" floatsGroupRows="NO" id="HLa-qY-f94">
-                                <rect key="frame" x="0.0" y="0.0" width="795" height="393"/>
+                                <rect key="frame" x="0.0" y="0.0" width="721" height="282"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <tableViewGridLines key="gridStyleMask" vertical="YES" dashed="YES"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn identifier="annee" editable="NO" width="116" minWidth="40" maxWidth="1000" id="eUD-Dx-eAa">
+                                    <tableColumn identifier="annee" editable="NO" width="100" minWidth="100" maxWidth="1000" id="eUD-Dx-eAa">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Année">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -54,15 +54,15 @@
                                         <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="annee"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="4Pd-FY-dbf">
-                                                <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                            <tableCellView identifier="annee" id="4Pd-FY-dbf">
+                                                <rect key="frame" x="1" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEj-ww-HZC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="17"/>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEj-ww-HZC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Année" usesSingleLineMode="YES" id="ZAc-IH-O5O">
-                                                            <font key="font" metaFont="cellTitle"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Année" id="ZAc-IH-O5O">
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -74,7 +74,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="mensuelle" editable="NO" width="110" minWidth="10" maxWidth="1000" id="ku9-Ed-XNe">
+                                    <tableColumn identifier="mensuelle" editable="NO" width="100" minWidth="100" maxWidth="1000" id="ku9-Ed-XNe">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Mensuelle">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -88,15 +88,15 @@
                                         <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="mensuelle"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="S42-fz-lQP">
-                                                <rect key="frame" x="120" y="1" width="110" height="17"/>
+                                            <tableCellView identifier="mensuelle" id="S42-fz-lQP">
+                                                <rect key="frame" x="104" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-ys-UlX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="17"/>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-ys-UlX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Mensuelle" usesSingleLineMode="YES" id="QB1-xm-kOg">
-                                                            <font key="font" metaFont="cellTitle"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Mensuelle" usesSingleLineMode="YES" id="QB1-xm-kOg">
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -108,7 +108,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="annuelle" editable="NO" width="110" minWidth="40" maxWidth="1000" id="4UM-Jt-Dmv">
+                                    <tableColumn identifier="annuelle" editable="NO" width="100" minWidth="100" maxWidth="1000" id="4UM-Jt-Dmv">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Annuelle">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -122,15 +122,15 @@
                                         <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="annuelle"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="Iww-UD-vnw">
-                                                <rect key="frame" x="233" y="1" width="110" height="17"/>
+                                            <tableCellView identifier="annuelle" id="Iww-UD-vnw">
+                                                <rect key="frame" x="207" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sED-XN-Znc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="17"/>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sED-XN-Znc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Annuelle" usesSingleLineMode="YES" id="Qu8-sQ-3r7">
-                                                            <font key="font" metaFont="cellTitle"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Annuelle" usesSingleLineMode="YES" id="Qu8-sQ-3r7">
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -142,7 +142,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="mensuelleMoyenne" editable="NO" width="110" minWidth="10" maxWidth="1000" id="NCI-3L-Nia">
+                                    <tableColumn identifier="mensuelleMoyenne" editable="NO" width="100" minWidth="100" maxWidth="1000" id="NCI-3L-Nia">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Mensuelle moyenne">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -156,15 +156,15 @@
                                         <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="mensuelleMoyenne"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="kQP-6N-JqB">
-                                                <rect key="frame" x="346" y="1" width="110" height="17"/>
+                                            <tableCellView identifier="mensuelleMoyenne" id="kQP-6N-JqB">
+                                                <rect key="frame" x="310" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBa-qP-Y5N">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="17"/>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBa-qP-Y5N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Mensuelle" usesSingleLineMode="YES" id="BH9-2j-4ZP">
-                                                            <font key="font" metaFont="cellTitle"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Mensuelle" usesSingleLineMode="YES" id="BH9-2j-4ZP">
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -176,7 +176,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="journaliere" editable="NO" width="118" minWidth="10" maxWidth="1000" id="922-r0-9t8">
+                                    <tableColumn identifier="journaliere" editable="NO" width="100" minWidth="100" maxWidth="1000" id="922-r0-9t8">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Journalière">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -190,15 +190,15 @@
                                         <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="journaliere"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="iqG-iM-gOv">
-                                                <rect key="frame" x="459" y="1" width="118" height="17"/>
+                                            <tableCellView identifier="journaliere" id="iqG-iM-gOv">
+                                                <rect key="frame" x="413" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-BL-QYR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="17"/>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-BL-QYR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Mensuelle moyenne" usesSingleLineMode="YES" id="nTF-II-PJZ">
-                                                            <font key="font" metaFont="cellTitle"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Mensuelle moyenne" usesSingleLineMode="YES" id="nTF-II-PJZ">
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -210,7 +210,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="horaire" editable="NO" width="110" minWidth="10" maxWidth="1000" id="HQQ-Oj-reF">
+                                    <tableColumn identifier="horaire" editable="NO" width="100" minWidth="100" maxWidth="1000" id="HQQ-Oj-reF">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Horaire">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -224,15 +224,15 @@
                                         <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="horaire"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="lXh-g1-IU9">
-                                                <rect key="frame" x="580" y="1" width="110" height="17"/>
+                                            <tableCellView identifier="horaire" id="lXh-g1-IU9">
+                                                <rect key="frame" x="516" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdB-v3-4hC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="17"/>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EdB-v3-4hC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Horaire" usesSingleLineMode="YES" id="iZS-rL-fTi">
-                                                            <font key="font" metaFont="cellTitle"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Horaire" usesSingleLineMode="YES" id="iZS-rL-fTi">
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -244,7 +244,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="commentaire" editable="NO" width="100" minWidth="10" maxWidth="1000" id="jnu-gL-k2Y">
+                                    <tableColumn identifier="commentaire" editable="NO" width="100" minWidth="100" maxWidth="1000" id="jnu-gL-k2Y">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Commentaire">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -258,15 +258,15 @@
                                         <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="commentaire"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="ePE-4G-yax">
-                                                <rect key="frame" x="693" y="1" width="100" height="17"/>
+                                            <tableCellView identifier="commentaire" id="ePE-4G-yax">
+                                                <rect key="frame" x="619" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-ST-Trf">
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-ST-Trf">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Commentaire" usesSingleLineMode="YES" id="cHq-l3-3tS">
-                                                            <font key="font" metaFont="cellTitle"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Commentaire" usesSingleLineMode="YES" id="cHq-l3-3tS">
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -283,170 +283,170 @@
                         </subviews>
                     </clipView>
                     <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="dwJ-l8-QKp">
-                        <rect key="frame" x="0.0" y="402" width="353" height="16"/>
+                        <rect key="frame" x="0.0" y="291" width="353" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hxY-7r-NuT">
-                        <rect key="frame" x="337" y="25" width="16" height="393"/>
+                        <rect key="frame" x="337" y="25" width="16" height="282"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <tableHeaderView key="headerView" id="hBG-iV-u7D">
-                        <rect key="frame" x="0.0" y="0.0" width="795" height="25"/>
+                        <rect key="frame" x="0.0" y="0.0" width="721" height="25"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd1-ol-LeA">
-                    <rect key="frame" x="353" y="0.0" width="250" height="391"/>
+                    <rect key="frame" x="353" y="0.0" width="250" height="282"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="aiH-xU-Zev">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="391"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="282"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view translatesAutoresizingMaskIntoConstraints="NO" id="bZE-yK-k5S">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="391"/>
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="282"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaW-bf-Sdb">
-                                        <rect key="frame" x="5" y="366" width="240" height="20"/>
+                                        <rect key="frame" x="5" y="257" width="240" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="6LV-U9-44R"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" borderStyle="border" alignment="left" title="Année" id="O1u-jg-Mcy">
-                                            <font key="font" metaFont="systemBold" size="12"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhI-Lb-Kh9">
-                                        <rect key="frame" x="5" y="304" width="240" height="20"/>
+                                        <rect key="frame" x="5" y="195" width="240" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Gft-2B-vNy"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" borderStyle="border" alignment="left" title="Masse salariale nette" id="61u-oh-EcW">
-                                            <font key="font" metaFont="systemBold" size="12"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBh-Y2-t4g">
-                                        <rect key="frame" x="8" y="276" width="62" height="16"/>
+                                        <rect key="frame" x="8" y="167" width="58" height="14"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" alignment="left" title="Mensuelle" id="EXQ-TT-EnK">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-mb-hf9">
-                                        <rect key="frame" x="93" y="251" width="149" height="16"/>
+                                        <rect key="frame" x="93" y="144" width="149" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="PiN-6l-TCd"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" alignment="left" placeholderString="Annuelle" usesSingleLineMode="YES" id="wOv-H1-uYV">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AJk-BC-I4f">
-                                        <rect key="frame" x="95" y="272" width="145" height="22"/>
+                                        <rect key="frame" x="95" y="163" width="145" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="yWd-uY-yL2"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Mensuelle" usesSingleLineMode="YES" bezelStyle="round" id="6Ve-kR-69c">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-Oj-s6a">
-                                        <rect key="frame" x="93" y="230" width="149" height="16"/>
+                                        <rect key="frame" x="93" y="125" width="149" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="xNt-qk-1hR"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" alignment="left" placeholderString="Mensuelle moyenne" usesSingleLineMode="YES" id="PhB-qd-lu4">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anF-wz-jnJ">
-                                        <rect key="frame" x="93" y="209" width="149" height="16"/>
+                                        <rect key="frame" x="93" y="106" width="149" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="ch8-hs-HYj"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" alignment="left" placeholderString="Journalière" usesSingleLineMode="YES" id="Ql4-A6-VIy">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE1-IX-4sK">
-                                        <rect key="frame" x="93" y="188" width="149" height="16"/>
+                                        <rect key="frame" x="93" y="87" width="149" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="awV-Qj-XvV"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" allowsUndo="NO" alignment="left" placeholderString="Horaire" usesSingleLineMode="YES" id="1QD-tY-m5u">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lk6-Si-87C">
-                                        <rect key="frame" x="8" y="250" width="53" height="16"/>
+                                        <rect key="frame" x="8" y="144" width="50" height="14"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" alignment="left" title="Annuelle" id="bAD-1x-t23">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YT-Pn-7qW">
-                                        <rect key="frame" x="8" y="230" width="69" height="16"/>
+                                        <rect key="frame" x="8" y="125" width="64" height="14"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" alignment="left" title="Mens. moy." id="CCE-ax-6qT">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anQ-OW-Iqg">
-                                        <rect key="frame" x="8" y="209" width="67" height="16"/>
+                                        <rect key="frame" x="8" y="106" width="63" height="14"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" alignment="left" title="Journalière" id="TUv-02-bgw">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1o-S1-u4h">
-                                        <rect key="frame" x="5" y="158" width="240" height="20"/>
+                                        <rect key="frame" x="5" y="57" width="240" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="5Ov-c5-4qe"/>
                                         </constraints>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" borderStyle="border" alignment="left" title="Commentaire" id="x8a-70-pwh">
-                                            <font key="font" metaFont="systemBold" size="12"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-Tr-ZHF">
-                                        <rect key="frame" x="10" y="126" width="230" height="22"/>
+                                        <rect key="frame" x="10" y="25" width="230" height="22"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Commentaire" usesSingleLineMode="YES" bezelStyle="round" id="oLV-KE-jMd">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-2J-xfu">
-                                        <rect key="frame" x="10" y="334" width="70" height="22"/>
+                                        <rect key="frame" x="10" y="225" width="70" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="sds-VV-rTg"/>
                                         </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Année" usesSingleLineMode="YES" bezelStyle="round" id="yHa-vg-DFd">
-                                            <font key="font" metaFont="cellTitle"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="Année" usesSingleLineMode="YES" bezelStyle="round" id="yHa-vg-DFd">
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKG-5O-YmQ">
-                                        <rect key="frame" x="8" y="188" width="46" height="16"/>
+                                        <rect key="frame" x="8" y="87" width="43" height="14"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" alignment="left" title="Horaire" id="tia-yt-wiL">
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -457,12 +457,12 @@
                                     <constraint firstAttribute="trailing" secondItem="EaW-bf-Sdb" secondAttribute="trailing" constant="5" id="55U-wb-STX"/>
                                     <constraint firstItem="KKG-5O-YmQ" firstAttribute="top" secondItem="anQ-OW-Iqg" secondAttribute="bottom" constant="5" id="6yK-aJ-fE0"/>
                                     <constraint firstItem="IhI-Lb-Kh9" firstAttribute="top" secondItem="xRg-2J-xfu" secondAttribute="bottom" constant="10" id="C7g-IY-jEY"/>
-                                    <constraint firstItem="NBh-Y2-t4g" firstAttribute="top" secondItem="IhI-Lb-Kh9" secondAttribute="bottom" constant="12" id="CBp-9h-NJk"/>
+                                    <constraint firstItem="NBh-Y2-t4g" firstAttribute="top" secondItem="IhI-Lb-Kh9" secondAttribute="bottom" constant="14" id="CBp-9h-NJk"/>
                                     <constraint firstItem="xRg-2J-xfu" firstAttribute="top" secondItem="EaW-bf-Sdb" secondAttribute="bottom" constant="10" id="CwZ-2v-XZc"/>
                                     <constraint firstItem="anF-wz-jnJ" firstAttribute="top" secondItem="pzW-Oj-s6a" secondAttribute="bottom" constant="5" id="DT1-H4-67T"/>
                                     <constraint firstItem="hXr-Tr-ZHF" firstAttribute="top" secondItem="I1o-S1-u4h" secondAttribute="bottom" constant="10" id="EcM-Or-8cD"/>
                                     <constraint firstAttribute="trailing" secondItem="AJk-BC-I4f" secondAttribute="trailing" constant="10" id="FLV-2T-ZBs"/>
-                                    <constraint firstItem="Lk6-Si-87C" firstAttribute="top" secondItem="NBh-Y2-t4g" secondAttribute="bottom" constant="10" id="GXQ-LO-GhQ"/>
+                                    <constraint firstItem="Lk6-Si-87C" firstAttribute="top" secondItem="NBh-Y2-t4g" secondAttribute="bottom" constant="9" id="GXQ-LO-GhQ"/>
                                     <constraint firstItem="EaW-bf-Sdb" firstAttribute="top" secondItem="bZE-yK-k5S" secondAttribute="top" constant="5" id="Hdq-AO-7m4"/>
                                     <constraint firstAttribute="trailing" secondItem="I1o-S1-u4h" secondAttribute="trailing" constant="5" id="IJO-DC-0AF"/>
                                     <constraint firstAttribute="trailing" secondItem="Xfh-mb-hf9" secondAttribute="trailing" constant="10" id="KEh-Iu-fOB"/>
@@ -483,7 +483,7 @@
                                     <constraint firstItem="xRg-2J-xfu" firstAttribute="leading" secondItem="bZE-yK-k5S" secondAttribute="leading" constant="10" id="pGr-Ps-LlY"/>
                                     <constraint firstItem="Lk6-Si-87C" firstAttribute="leading" secondItem="bZE-yK-k5S" secondAttribute="leading" constant="10" id="qqE-uc-U29"/>
                                     <constraint firstItem="EaW-bf-Sdb" firstAttribute="leading" secondItem="bZE-yK-k5S" secondAttribute="leading" constant="5" id="rFd-8G-FS5"/>
-                                    <constraint firstItem="6YT-Pn-7qW" firstAttribute="top" secondItem="Lk6-Si-87C" secondAttribute="bottom" constant="4" id="s6U-Fk-LXW"/>
+                                    <constraint firstItem="6YT-Pn-7qW" firstAttribute="top" secondItem="Lk6-Si-87C" secondAttribute="bottom" constant="5" id="s6U-Fk-LXW"/>
                                     <constraint firstItem="NBh-Y2-t4g" firstAttribute="leading" secondItem="bZE-yK-k5S" secondAttribute="leading" constant="10" id="s9r-IC-pyW"/>
                                     <constraint firstItem="IhI-Lb-Kh9" firstAttribute="leading" secondItem="bZE-yK-k5S" secondAttribute="leading" constant="5" id="z1u-RR-QV0"/>
                                     <constraint firstItem="anQ-OW-Iqg" firstAttribute="top" secondItem="6YT-Pn-7qW" secondAttribute="bottom" constant="5" id="zZM-Kz-nen"/>
@@ -507,7 +507,7 @@
                     </scroller>
                 </scrollView>
                 <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-sF-326">
-                    <rect key="frame" x="353" y="393" width="250" height="24"/>
+                    <rect key="frame" x="353" y="282" width="250" height="24"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="36" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glf-NV-dzt">
                             <rect key="frame" x="40" y="3" width="170" height="21"/>
@@ -566,13 +566,13 @@
                 <constraint firstItem="Hd1-ol-LeA" firstAttribute="leading" secondItem="G3p-aq-apb" secondAttribute="trailing" id="MIP-at-k83"/>
                 <constraint firstAttribute="trailing" secondItem="Hd1-ol-LeA" secondAttribute="trailing" id="MS7-bX-t4A"/>
                 <constraint firstAttribute="bottom" secondItem="Hd1-ol-LeA" secondAttribute="bottom" id="Qgo-S4-qQz"/>
+                <constraint firstItem="Hd1-ol-LeA" firstAttribute="top" secondItem="rBU-sF-326" secondAttribute="bottom" id="U7A-BM-Yvo"/>
                 <constraint firstAttribute="bottom" secondItem="G3p-aq-apb" secondAttribute="bottom" id="aml-xM-XxP"/>
                 <constraint firstItem="rBU-sF-326" firstAttribute="leading" secondItem="G3p-aq-apb" secondAttribute="trailing" id="baf-R8-RYz"/>
                 <constraint firstItem="G3p-aq-apb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="qzN-go-QqE"/>
                 <constraint firstAttribute="trailing" secondItem="rBU-sF-326" secondAttribute="trailing" id="tZL-eD-0Gt"/>
-                <constraint firstItem="Hd1-ol-LeA" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="27" id="wOx-VR-o3H"/>
             </constraints>
-            <point key="canvasLocation" x="137.5" y="130"/>
+            <point key="canvasLocation" x="137.5" y="74.5"/>
         </customView>
     </objects>
     <resources>

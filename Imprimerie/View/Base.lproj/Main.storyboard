@@ -148,13 +148,13 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Rapports" id="WMk-EG-B2R">
                                     <items>
-                                        <menuItem title="Quotidien" id="ZSW-Mi-AOW">
+                                        <menuItem title="Quotidiens" id="ZSW-Mi-AOW">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="Mensuels" id="GKX-WC-C5a">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                         <menuItem title="Ventes de gâches" id="b4p-M7-Vnr">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                        </menuItem>
-                                        <menuItem title="Mensuel" id="GKX-WC-C5a">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
@@ -379,7 +379,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="27" horizontalPageScroll="10" verticalLineScroll="27" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-in-xfo">
+                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="25" horizontalPageScroll="10" verticalLineScroll="25" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-in-xfo">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="Huj-3d-KbD">
@@ -389,7 +389,7 @@
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" viewBased="YES" indentationPerLevel="5" indentationMarkerFollowsCell="NO" outlineTableColumn="0Up-Jk-1Lf" id="F5U-bO-ogK">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="600"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <size key="intercellSpacing" width="2" height="3"/>
+                                            <size key="intercellSpacing" width="2" height="1"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
@@ -407,7 +407,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="HeaderCell" id="UeG-Gb-ufw">
-                                                            <rect key="frame" x="1" y="1" width="248" height="17"/>
+                                                            <rect key="frame" x="1" y="0.0" width="248" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u3v-IR-a1d">
@@ -429,7 +429,7 @@
                                                             </connections>
                                                         </tableCellView>
                                                         <tableCellView identifier="DataCell" id="BTn-Gq-ICx" customClass="DataTableCellView" customModule="Imprimerie" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="21" width="248" height="20"/>
+                                                            <rect key="frame" x="1" y="18" width="248" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="zO5-ns-GgJ">
@@ -437,9 +437,9 @@
                                                                     <imageCell key="cell" refusesFirstResponder="YES" imageAlignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="roq-Of-5ka"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="a35-eO-M9C">
-                                                                    <rect key="frame" x="17" y="-1" width="96" height="17"/>
+                                                                    <rect key="frame" x="17" y="0.0" width="90" height="16"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="8Ro-gj-jcp">
-                                                                        <font key="font" metaFont="system"/>
+                                                                        <font key="font" metaFont="cellTitle"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -447,7 +447,7 @@
                                                                 <button verticalHuggingPriority="750" verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="pfc-gU-Obu">
                                                                     <rect key="frame" x="202" y="-1" width="43" height="17"/>
                                                                     <buttonCell key="cell" type="inline" title="Inline" bezelStyle="inline" alignment="center" refusesFirstResponder="YES" borderStyle="border" inset="2" id="711-UI-INl">
-                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <behavior key="behavior" lightByContents="YES"/>
                                                                         <font key="font" metaFont="smallSystemBold"/>
                                                                     </buttonCell>
                                                                 </button>

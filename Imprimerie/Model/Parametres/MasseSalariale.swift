@@ -24,4 +24,11 @@ class MasseSalariale: NSManagedObject {
   var journaliere: Double { return mensuelleMoyenne / Double (MainWindow.nbJoursTravaillesAnnee) }   // Par jour
   var horaire: Double { return Double(journaliere / 8) }    // Horaire
 
+  // Count data
+  static var count: Int {
+    let request: NSFetchRequest<MasseSalariale> = MasseSalariale.fetchRequest()
+    guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
+    return count
+  }
+
 }

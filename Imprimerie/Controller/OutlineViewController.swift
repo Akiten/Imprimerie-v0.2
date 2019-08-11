@@ -91,6 +91,19 @@ extension ViewController: NSOutlineViewDelegate {
       }
       dataCellView?.imageView?.image = NSImage (named: detail.icon)
       dataCellView?.inlineButton.title = detail.count
+      switch detail.name {
+      case "Consommables": dataCellView?.inlineButton.title = String (Consommable.count)
+      case "Jours travaillés": dataCellView?.inlineButton.title = String (JourTravaille.count)
+      case "Masse salariale": dataCellView?.inlineButton.title = String (MasseSalariale.count)
+      case "Parutions": dataCellView?.inlineButton.title = String (Parution.count)
+      case "Clients": dataCellView?.inlineButton.title = String (Client.count)
+      case "Fournisseurs": dataCellView?.inlineButton.title = String (Fournisseur.count)
+      case "Salariés": dataCellView?.inlineButton.title = String (Salarie.count)
+      case "Commandes": dataCellView?.inlineButton.title = String (Commande.count)
+      case "Etats de besoins": dataCellView?.inlineButton.title = String (EtatDeBesoin.count)
+      case "Facturation": dataCellView?.inlineButton.title = String (Facture.count)
+      default: dataCellView?.inlineButton.isHidden = true
+      }
       dataCellView?.inlineButton.sizeToFit()
       view = dataCellView
     }
@@ -112,7 +125,7 @@ extension ViewController: NSOutlineViewDelegate {
     var vc = NSView()
     switch outlineViewSelectedName {
     case "Consommables": vc = consommablesViewController.view
-    case "Jours Travaillés": vc = joursTravaillesViewController.view
+    case "Jours travaillés": vc = joursTravaillesViewController.view
     case "Masse salariale": vc = massesSalarialesViewController.view
     case "Parutions": vc = parutionsViewController.view
     case "Clients": vc = clientsViewController.view
@@ -120,6 +133,7 @@ extension ViewController: NSOutlineViewDelegate {
     case "Salariés": vc = salariesViewController.view
     case "Commandes": vc = commandesViewController.view
     case "Etats de besoins": vc = etatsDeBesoinsViewController.view
+    case "Facturation": vc = facturesViewController.view
     default: vc = NSView()
     }
 

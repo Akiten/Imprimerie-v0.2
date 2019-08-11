@@ -17,4 +17,11 @@ class Consommable: NSManagedObject {
     guard let consommables = try? AppDelegate.viewContext.fetch(request) else { return [] }
     return consommables
   }
+
+  // Count data
+  static var count: Int {
+    let request: NSFetchRequest<Consommable> = Consommable.fetchRequest()
+    guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
+    return count
+  }
 }

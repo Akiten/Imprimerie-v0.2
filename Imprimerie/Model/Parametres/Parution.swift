@@ -17,4 +17,11 @@ class Parution: NSManagedObject {
     guard let parutions = try? AppDelegate.viewContext.fetch(request) else { return [] }
     return parutions
   }
+
+  // Count data
+  static var count: Int {
+    let request: NSFetchRequest<Parution> = Parution.fetchRequest()
+    guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
+    return count
+  }
 }

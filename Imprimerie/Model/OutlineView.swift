@@ -38,7 +38,7 @@ func initOutlineView() -> [Section] {
 
   // Section Paramètres
   detail.append(Detail("Consommables", "NSActionTemplate", "1"))
-  detail.append(Detail("Jours Travaillés", "NSActionTemplate", "2"))
+  detail.append(Detail("Jours travaillés", "NSActionTemplate", "2"))
   detail.append(Detail("Masse salariale", "NSActionTemplate", "3"))
   detail.append(Detail("Parutions", "NSActionTemplate", "4"))
   section.append(Section("PARAMETRES", detail))

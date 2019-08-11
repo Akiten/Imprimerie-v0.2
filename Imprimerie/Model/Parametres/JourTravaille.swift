@@ -20,4 +20,11 @@ class JourTravaille: NSManagedObject {
 
   // Calculated fields
   var nbJoursTravailles: Int { return Int(nbJoursOuvres - nbJoursFeries) }
+
+  // Count data
+  static var count: Int {
+    let request: NSFetchRequest<JourTravaille> = JourTravaille.fetchRequest()
+    guard let count = try? AppDelegate.viewContext.count(for: request) else { return 0 }
+    return count
+  }
 }
