@@ -17,7 +17,8 @@ class SalariesViewController: NSViewController {
   // Controls
   @IBOutlet weak var addRemoveTemplateSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
-
+  @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
+  
   // textFields
   @IBOutlet weak var salarieTextField: NSTextField!
   @IBOutlet weak var nomTextField: NSTextField!
@@ -32,31 +33,16 @@ class SalariesViewController: NSViewController {
   @IBOutlet weak var posteComboBox: NSComboBox!
   @IBOutlet weak var equipeComboBox: NSComboBox!
 
-  // Init datas
-  func initDataView() {
-    salarieTextField.stringValue = ""
-    nomTextField.stringValue = ""
-    prenomTextField.stringValue = ""
-    netMensuelTextField.stringValue = ""
-    netMensuelMoyenTextField.stringValue = ""
-    netJournalierTextField.stringValue = ""
-    netHoraireTextField.stringValue = ""
-    serviceComboBox.stringValue = ""
-    fonctionComboBox.stringValue = ""
-    posteComboBox.stringValue = ""
-    equipeComboBox.stringValue = ""
-    commentaireTextField.stringValue = ""
-  }
-
   // Init class data
-  var salaries = Salarie.all    // getDate from entity
+  var salaries = Salarie.all    // Get Data from entity
+  var dataInsert = false    // For Insert or Update data in entity Core Data
+  var oldSalarie = ""   // For update salarie field if necessary
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
       super.viewDidLoad()
       // Do view setup here.
   }
-
   override func viewWillAppear() {
     super.viewWillAppear()
 
@@ -66,10 +52,6 @@ class SalariesViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
-
-    // Init datas
-    initDataView()
-
   }
 
 }

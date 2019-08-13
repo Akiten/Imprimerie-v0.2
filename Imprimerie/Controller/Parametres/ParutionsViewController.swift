@@ -17,7 +17,8 @@ class ParutionsViewController: NSViewController {
   // Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
-  
+  @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
+
   // textFields
   @IBOutlet weak var parutionTextField: NSTextField!    // Unique
   @IBOutlet weak var joursParutionTextField: NSTextField!
@@ -28,20 +29,10 @@ class ParutionsViewController: NSViewController {
   @IBOutlet weak var commentaireTextField: NSTextField!
   @IBOutlet weak var clientComboBox: NSComboBox!    // Select customer from customer entity
 
-  // Init datas
-  func initDataView() {
-    parutionTextField.stringValue = ""
-    joursParutionTextField.stringValue = ""
-    pxVente4pTextField.stringValue = ""
-    pxVente8pTextField.stringValue = ""
-    pxVente16pTextField.stringValue = ""
-    pxVente24pTextField.stringValue = ""
-    commentaireTextField.stringValue = ""
-    clientComboBox.stringValue = ""
-  }
-
   // Init class data
-  var parutions = Parution.all    // getDate from entity
+  var parutions = Parution.all    // Get data from entity
+  var dataInsert = false    // For Insert or Update data in entity Core Data
+  var oldParution = ""   // For update parution field if necessary
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
@@ -55,9 +46,6 @@ class ParutionsViewController: NSViewController {
     // Delegates
     tableView.dataSource = self
     tableView.delegate = self
-
-    // Init datas
-    initDataView()
   }
 
 }

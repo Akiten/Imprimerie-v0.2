@@ -116,6 +116,7 @@ extension ViewController: NSOutlineViewDelegate {
     if let detail = outlineView.item(atRow: outlineView.selectedRow) as? Detail {
       outlineViewSelectedName = detail.name
       updateWindowTitle(outlineViewSelectedName)
+      outlineViewSelectedIndex = outlineView.selectedRow
       changeViewItem()
     }
   }
@@ -143,5 +144,11 @@ extension ViewController: NSOutlineViewDelegate {
     viewBidingsDict["vc"] = vc
     customView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[vc]|", options: [], metrics: nil, views: viewBidingsDict))
     customView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[vc]|", options: [], metrics: nil, views: viewBidingsDict))
+  }
+}
+
+extension ViewController: updateOutlineView {
+  func updateAfterInsertData() {
+    outlineView.reloadData(forRowIndexes: [outlineViewSelectedIndex], columnIndexes: [0])
   }
 }

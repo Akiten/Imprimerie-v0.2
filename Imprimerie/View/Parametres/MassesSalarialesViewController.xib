@@ -16,6 +16,7 @@
                 <outlet property="journaliereTextField" destination="anF-wz-jnJ" id="Aq7-Qa-WSM"/>
                 <outlet property="mensuelleMoyenneTextField" destination="pzW-Oj-s6a" id="gHS-EV-v1e"/>
                 <outlet property="mensuelleTextField" destination="AJk-BC-I4f" id="3ub-CE-8T6"/>
+                <outlet property="saveSegmentedControl" destination="oih-WK-Ko5" id="6u2-94-ghR"/>
                 <outlet property="tableView" destination="HLa-qY-f94" id="A77-9T-IYw"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -33,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveName="masseSalarialeTableView" rowSizeStyle="automatic" headerView="hBG-iV-u7D" viewBased="YES" floatsGroupRows="NO" id="HLa-qY-f94">
-                                <rect key="frame" x="0.0" y="0.0" width="721" height="282"/>
+                                <rect key="frame" x="0.0" y="0.0" width="731" height="282"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -176,7 +177,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="journaliere" editable="NO" width="100" minWidth="100" maxWidth="1000" id="922-r0-9t8">
+                                    <tableColumn identifier="journaliere" editable="NO" width="110" minWidth="110" maxWidth="1000" id="922-r0-9t8">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Journalière">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -191,11 +192,11 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView identifier="journaliere" id="iqG-iM-gOv">
-                                                <rect key="frame" x="413" y="1" width="100" height="17"/>
+                                                <rect key="frame" x="413" y="1" width="110" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-BL-QYR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Mensuelle moyenne" usesSingleLineMode="YES" id="nTF-II-PJZ">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -225,7 +226,7 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView identifier="horaire" id="lXh-g1-IU9">
-                                                <rect key="frame" x="516" y="1" width="100" height="17"/>
+                                                <rect key="frame" x="526" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EdB-v3-4hC">
@@ -259,7 +260,7 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView identifier="commentaire" id="ePE-4G-yax">
-                                                <rect key="frame" x="619" y="1" width="100" height="17"/>
+                                                <rect key="frame" x="629" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-ST-Trf">
@@ -291,7 +292,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <tableHeaderView key="headerView" id="hBG-iV-u7D">
-                        <rect key="frame" x="0.0" y="0.0" width="721" height="25"/>
+                        <rect key="frame" x="0.0" y="0.0" width="731" height="25"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
@@ -424,7 +425,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-Tr-ZHF">
+                                    <textField verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-Tr-ZHF">
                                         <rect key="frame" x="10" y="25" width="230" height="22"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Commentaire" usesSingleLineMode="YES" bezelStyle="round" id="oLV-KE-jMd">
                                             <font key="font" metaFont="smallSystem"/>
@@ -501,21 +502,21 @@
                         <rect key="frame" x="-100" y="-100" width="250" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="g6w-dr-FHl">
-                        <rect key="frame" x="234" y="0.0" width="16" height="393"/>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="g6w-dr-FHl">
+                        <rect key="frame" x="234" y="0.0" width="16" height="278"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
                 <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-sF-326">
-                    <rect key="frame" x="353" y="282" width="250" height="24"/>
+                    <rect key="frame" x="353" y="282" width="250" height="21"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="36" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glf-NV-dzt">
-                            <rect key="frame" x="40" y="3" width="170" height="21"/>
+                            <rect key="frame" x="5" y="3" width="240" height="18"/>
                             <subviews>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dkx-cr-kXu">
-                                    <rect key="frame" x="-2" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="b3Y-Ms-Qw2">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="-1" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="b3Y-Ms-Qw2">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Ajouter" image="NSAddTemplate" width="32"/>
                                             <segment toolTip="Supprimer" image="NSRemoveTemplate" width="32" enabled="NO" tag="1"/>
@@ -523,12 +524,21 @@
                                     </segmentedCell>
                                 </segmentedControl>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ls5-kC-hzN">
-                                    <rect key="frame" x="101" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="SJ7-mR-v0q">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="102" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="SJ7-mR-v0q">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Importer" image="NSTouchBarFolderMoveToTemplate" width="32"/>
                                             <segment toolTip="Exporter" image="NSTouchBarFolderCopyToTemplate" width="32" tag="1"/>
+                                        </segments>
+                                    </segmentedCell>
+                                </segmentedControl>
+                                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oih-WK-Ko5">
+                                    <rect key="frame" x="205" y="-1" width="36" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="Xix-Pq-t6D">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <segments>
+                                            <segment toolTip="Sauvegarder" image="NSTouchBarSlideshowTemplate" width="32"/>
                                         </segments>
                                     </segmentedCell>
                                 </segmentedControl>
@@ -536,8 +546,10 @@
                             <visibilityPriorities>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
@@ -560,7 +572,7 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="rBU-sF-326" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="5Qe-5e-Ec8"/>
+                <constraint firstItem="rBU-sF-326" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="5Qe-5e-Ec8"/>
                 <constraint firstItem="G3p-aq-apb" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="D2v-VR-SrC"/>
                 <constraint firstAttribute="trailing" secondItem="G3p-aq-apb" secondAttribute="trailing" constant="250" id="JpP-7S-FfV"/>
                 <constraint firstItem="Hd1-ol-LeA" firstAttribute="leading" secondItem="G3p-aq-apb" secondAttribute="trailing" id="MIP-at-k83"/>
@@ -580,5 +592,6 @@
         <image name="NSRemoveTemplate" width="11" height="11"/>
         <image name="NSTouchBarFolderCopyToTemplate" width="26" height="30"/>
         <image name="NSTouchBarFolderMoveToTemplate" width="22" height="30"/>
+        <image name="NSTouchBarSlideshowTemplate" width="22" height="30"/>
     </resources>
 </document>

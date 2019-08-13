@@ -17,6 +17,7 @@ class FournisseursViewController: NSViewController {
   // Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
+  @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
 
   // textFields
   @IBOutlet weak var fournisseurTextField: NSTextField!
@@ -25,24 +26,16 @@ class FournisseursViewController: NSViewController {
   @IBOutlet weak var soldeTextField: NSTextField!
   @IBOutlet weak var commentaireTextField: NSTextField!
 
-  // Init datas
-  func initDataView() {
-    fournisseurTextField.stringValue = ""
-    facturationTextField.stringValue = ""
-    reglementsTextField.stringValue = ""
-    soldeTextField.stringValue = ""
-    commentaireTextField.stringValue = ""
-  }
-
   // Init class data
-  var fournisseurs = Fournisseur.all    // getDate from entity
+  var fournisseurs = Fournisseur.all    // Get Data from entity
+  var dataInsert = false    // For Insert or Update data in entity Core Data
+  var oldfournisseur = ""   // For update fournisseur field if necessary
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do view setup here.
   }
-
   override func viewWillAppear() {
     super.viewWillAppear()
 
@@ -52,9 +45,6 @@ class FournisseursViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
-
-    // Init datas
-    initDataView()
   }
 
 }

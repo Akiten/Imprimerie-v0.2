@@ -20,6 +20,7 @@
                 <outlet property="posteComboBox" destination="I0G-9r-Klz" id="JLx-wv-ToD"/>
                 <outlet property="prenomTextField" destination="zTF-jk-7nL" id="IIr-po-AGN"/>
                 <outlet property="salarieTextField" destination="E24-Nn-aWm" id="r6I-J0-lng"/>
+                <outlet property="saveSegmentedControl" destination="QOT-Qx-Qjm" id="aVi-my-fHE"/>
                 <outlet property="serviceComboBox" destination="bZ2-SO-vx7" id="mCc-nW-0B3"/>
                 <outlet property="tableView" destination="Y6n-Ej-L6a" id="OLf-Dq-Bhj"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -38,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveName="salariesTableView" rowSizeStyle="automatic" headerView="76M-1h-FmD" viewBased="YES" floatsGroupRows="NO" id="Y6n-Ej-L6a">
-                                <rect key="frame" x="0.0" y="0.0" width="1133" height="492"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1143" height="492"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -63,7 +64,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhh-fR-9l6">
-                                                        <rect key="frame" x="12" y="0.0" width="13" height="16"/>
+                                                        <rect key="frame" x="14" y="0.0" width="4" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Nom" id="je4-mW-Wzn">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -96,7 +97,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z0U-hh-hDT">
-                                                        <rect key="frame" x="12" y="0.0" width="30" height="16"/>
+                                                        <rect key="frame" x="14" y="0.0" width="4" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Prénom" id="09Z-Bk-x2h">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -349,7 +350,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="netMensuelMoyen" editable="NO" width="100" minWidth="100" maxWidth="1000" id="XH3-hk-HCV">
+                                    <tableColumn identifier="netMensuelMoyen" editable="NO" width="110" minWidth="110" maxWidth="1000" id="XH3-hk-HCV">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Net mensuel moyen">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -364,11 +365,11 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView identifier="netMensuelMoyen" id="0s4-im-Kk0">
-                                                <rect key="frame" x="722" y="1" width="100" height="17"/>
+                                                <rect key="frame" x="722" y="1" width="110" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKL-DX-WX9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Net mensuel moyen" id="xrM-bf-8ZH">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -398,7 +399,7 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView identifier="netJournalier" id="EwT-IP-HMI">
-                                                <rect key="frame" x="825" y="1" width="100" height="17"/>
+                                                <rect key="frame" x="835" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaI-B4-m7h">
@@ -432,7 +433,7 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView identifier="netHoraire" id="UMH-uy-ja4">
-                                                <rect key="frame" x="928" y="1" width="100" height="17"/>
+                                                <rect key="frame" x="938" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaF-OL-vsi">
@@ -466,7 +467,7 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView identifier="commentaire" id="j8v-FT-2SJ">
-                                                <rect key="frame" x="1031" y="1" width="100" height="17"/>
+                                                <rect key="frame" x="1041" y="1" width="100" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3C8-p5-1ji">
@@ -498,7 +499,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <tableHeaderView key="headerView" id="76M-1h-FmD">
-                        <rect key="frame" x="0.0" y="0.0" width="1133" height="25"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1143" height="25"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
@@ -843,20 +844,20 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="nBS-qN-hkJ">
-                        <rect key="frame" x="234" y="0.0" width="16" height="490"/>
+                        <rect key="frame" x="234" y="0.0" width="16" height="488"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
                 <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfL-zu-pEH">
-                    <rect key="frame" x="304" y="492" width="250" height="24"/>
+                    <rect key="frame" x="304" y="492" width="250" height="21"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="36" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-wA-4tk">
-                            <rect key="frame" x="40" y="3" width="170" height="21"/>
+                            <rect key="frame" x="5" y="3" width="240" height="18"/>
                             <subviews>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dRq-rS-Gr3">
-                                    <rect key="frame" x="-2" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="KYB-ct-Jbn">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="-1" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="KYB-ct-Jbn">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Ajouter" image="NSAddTemplate" width="32"/>
                                             <segment toolTip="Supprimer" image="NSRemoveTemplate" width="32" enabled="NO" tag="1"/>
@@ -864,12 +865,21 @@
                                     </segmentedCell>
                                 </segmentedControl>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yg2-TQ-iOQ">
-                                    <rect key="frame" x="101" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="GGI-de-erB">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="102" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="GGI-de-erB">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Importer" image="NSTouchBarFolderMoveToTemplate" width="32"/>
                                             <segment toolTip="Exporter" image="NSTouchBarFolderCopyToTemplate" width="32" tag="1"/>
+                                        </segments>
+                                    </segmentedCell>
+                                </segmentedControl>
+                                <segmentedControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-Qx-Qjm">
+                                    <rect key="frame" x="205" y="-1" width="36" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="r81-Ex-Xfr">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <segments>
+                                            <segment toolTip="Sauvegarder" image="NSTouchBarSlideshowTemplate" width="32"/>
                                         </segments>
                                     </segmentedCell>
                                 </segmentedControl>
@@ -877,8 +887,10 @@
                             <visibilityPriorities>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
@@ -907,7 +919,7 @@
                 <constraint firstItem="4sy-sC-vWk" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="YHn-Mg-Nyr"/>
                 <constraint firstItem="kYs-IT-TYg" firstAttribute="leading" secondItem="4sy-sC-vWk" secondAttribute="trailing" id="emo-U0-M7M"/>
                 <constraint firstAttribute="trailing" secondItem="kYs-IT-TYg" secondAttribute="trailing" id="mb3-9s-CTh"/>
-                <constraint firstItem="kfL-zu-pEH" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="pbi-Xk-T3C"/>
+                <constraint firstItem="kfL-zu-pEH" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="pbi-Xk-T3C"/>
                 <constraint firstItem="kfL-zu-pEH" firstAttribute="leading" secondItem="4sy-sC-vWk" secondAttribute="trailing" id="sXp-Uc-vXe"/>
                 <constraint firstItem="kYs-IT-TYg" firstAttribute="top" secondItem="kfL-zu-pEH" secondAttribute="bottom" id="t8G-2e-mqp"/>
                 <constraint firstAttribute="bottom" secondItem="4sy-sC-vWk" secondAttribute="bottom" id="tl0-p3-9uQ"/>
@@ -921,5 +933,6 @@
         <image name="NSRemoveTemplate" width="11" height="11"/>
         <image name="NSTouchBarFolderCopyToTemplate" width="26" height="30"/>
         <image name="NSTouchBarFolderMoveToTemplate" width="22" height="30"/>
+        <image name="NSTouchBarSlideshowTemplate" width="22" height="30"/>
     </resources>
 </document>

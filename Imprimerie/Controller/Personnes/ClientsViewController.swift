@@ -17,6 +17,7 @@ class ClientsViewController: NSViewController {
   // Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
+  @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
 
   // textFields
   @IBOutlet weak var clientTextField: NSTextField!    // Unique
@@ -25,24 +26,16 @@ class ClientsViewController: NSViewController {
   @IBOutlet weak var soldeTextField: NSTextField!   // Calculated field
   @IBOutlet weak var commentaireTextField: NSTextField!
   
-  // Init datas
-  func initDataView() {
-    clientTextField.stringValue = ""
-    facturationTextField.stringValue = ""
-    reglementsTextField.stringValue = ""
-    soldeTextField.stringValue = ""
-    commentaireTextField.stringValue = ""
-  }
-
   // Init class data
-  var clients = Client.all    // getDate from entity
+  var clients = Client.all    // Get Data from entity
+  var dataInsert = false    // For Insert or Update data in entity Core Data
+  var oldClient = ""   // For update client field if necessary
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do view setup here.
   }
-
   override func viewWillAppear() {
     super.viewWillAppear()
 
@@ -52,11 +45,7 @@ class ClientsViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
-
-    // Init datas
-    initDataView()
   }
-
 }
 
 // MARK: - tableView dataSource

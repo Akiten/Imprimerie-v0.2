@@ -15,6 +15,7 @@
                 <outlet property="nbJoursOuvresTextField" destination="2Xr-Nh-Upi" id="IKB-ci-pvP"/>
                 <outlet property="nbJoursTextField" destination="UiJ-ci-veg" id="c9B-Sd-cJN"/>
                 <outlet property="nbJoursTravaiilesTextField" destination="02A-XU-FPM" id="sUp-ya-L5J"/>
+                <outlet property="saveSegmentedControl" destination="7aO-FD-Bxf" id="0od-3C-bld"/>
                 <outlet property="tableView" destination="aQc-nu-oz3" id="TTg-j3-sBz"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -247,7 +248,7 @@
                             </tableView>
                         </subviews>
                     </clipView>
-                    <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.99111111111111116" horizontal="YES" id="2Up-HC-PJs">
+                    <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="2Up-HC-PJs">
                         <rect key="frame" x="0.0" y="243" width="393" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -399,7 +400,7 @@
                                         </textFieldCell>
                                         <accessibility description="nbJoursOuvres-nbJoursFeries"/>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rn2-QS-bZl">
+                                    <textField verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rn2-QS-bZl">
                                         <rect key="frame" x="10" y="10" width="230" height="22"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Commentaire" usesSingleLineMode="YES" bezelStyle="round" id="WLT-x3-0LP">
                                             <font key="font" metaFont="smallSystem"/>
@@ -454,21 +455,21 @@
                         <rect key="frame" x="-100" y="-100" width="250" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fDB-VE-UEp">
-                        <rect key="frame" x="234" y="0.0" width="16" height="232"/>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="fDB-VE-UEp">
+                        <rect key="frame" x="234" y="0.0" width="16" height="234"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yG-nu-E5X">
-                    <rect key="frame" x="393" y="234" width="250" height="24"/>
+                <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="1" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yG-nu-E5X">
+                    <rect key="frame" x="393" y="235" width="250" height="20"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="36" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A11-oW-86p">
-                            <rect key="frame" x="40" y="3" width="170" height="21"/>
+                            <rect key="frame" x="5" y="2" width="240" height="18"/>
                             <subviews>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-bk-44V">
-                                    <rect key="frame" x="-2" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="nso-9p-vjS">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="-1" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="nso-9p-vjS">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Ajouter" image="NSAddTemplate" width="32"/>
                                             <segment toolTip="Supprimer" image="NSRemoveTemplate" width="32" enabled="NO" tag="1"/>
@@ -476,12 +477,21 @@
                                     </segmentedCell>
                                 </segmentedControl>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M4O-k9-jY1">
-                                    <rect key="frame" x="101" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="yAh-ts-cP1">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="102" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="yAh-ts-cP1">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Importer" image="NSTouchBarFolderMoveToTemplate" width="32"/>
                                             <segment toolTip="Exporter" image="NSTouchBarFolderCopyToTemplate" width="32" tag="1"/>
+                                        </segments>
+                                    </segmentedCell>
+                                </segmentedControl>
+                                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7aO-FD-Bxf">
+                                    <rect key="frame" x="205" y="-1" width="36" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="LZ5-HF-g2j">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <segments>
+                                            <segment toolTip="Sauvegarder" image="NSTouchBarSlideshowTemplate" width="32"/>
                                         </segments>
                                     </segmentedCell>
                                 </segmentedControl>
@@ -489,8 +499,10 @@
                             <visibilityPriorities>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
@@ -520,9 +532,9 @@
                 <constraint firstAttribute="trailing" secondItem="K0v-5y-7eu" secondAttribute="trailing" constant="250" id="Sij-wX-4Ah"/>
                 <constraint firstItem="K0v-5y-7eu" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="U79-eF-ou7"/>
                 <constraint firstAttribute="trailing" secondItem="DHz-Jh-a5A" secondAttribute="trailing" id="Xkh-ht-j36"/>
-                <constraint firstItem="DHz-Jh-a5A" firstAttribute="top" secondItem="6yG-nu-E5X" secondAttribute="bottom" id="qEO-60-X90"/>
+                <constraint firstItem="DHz-Jh-a5A" firstAttribute="top" secondItem="6yG-nu-E5X" secondAttribute="bottom" constant="1" id="qEO-60-X90"/>
                 <constraint firstAttribute="bottom" secondItem="K0v-5y-7eu" secondAttribute="bottom" id="sml-YL-GY8"/>
-                <constraint firstItem="6yG-nu-E5X" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="tiP-5f-6ea"/>
+                <constraint firstItem="6yG-nu-E5X" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="tiP-5f-6ea"/>
                 <constraint firstAttribute="trailing" secondItem="6yG-nu-E5X" secondAttribute="trailing" id="wZc-SR-aur"/>
             </constraints>
             <point key="canvasLocation" x="134.5" y="-41.5"/>
@@ -533,5 +545,6 @@
         <image name="NSRemoveTemplate" width="11" height="11"/>
         <image name="NSTouchBarFolderCopyToTemplate" width="26" height="30"/>
         <image name="NSTouchBarFolderMoveToTemplate" width="22" height="30"/>
+        <image name="NSTouchBarSlideshowTemplate" width="22" height="30"/>
     </resources>
 </document>

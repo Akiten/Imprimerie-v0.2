@@ -39,6 +39,8 @@
 		0495D42F22FA92B80026A088 /* Salarie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495D42E22FA92B70026A088 /* Salarie.swift */; };
 		0495D43222FABB6C0026A088 /* SalariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495D43022FABB6C0026A088 /* SalariesViewController.swift */; };
 		0495D43322FABB6C0026A088 /* SalariesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495D43122FABB6C0026A088 /* SalariesViewController.xib */; };
+		0499AD4B230271F600E356A4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499AD4A230271F600E356A4 /* Protocols.swift */; };
+		0499AD4D2302762600E356A4 /* Gache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499AD4C2302762600E356A4 /* Gache.swift */; };
 		049C244B22F8026500FF3F0A /* JourTravaille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C244A22F8026500FF3F0A /* JourTravaille.swift */; };
 		049C244E22F8032400FF3F0A /* JoursTravaillesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */; };
 		049C244F22F8032400FF3F0A /* JoursTravaillesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */; };
@@ -85,6 +87,8 @@
 		0495D42E22FA92B70026A088 /* Salarie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salarie.swift; sourceTree = "<group>"; };
 		0495D43022FABB6C0026A088 /* SalariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalariesViewController.swift; sourceTree = "<group>"; };
 		0495D43122FABB6C0026A088 /* SalariesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalariesViewController.xib; sourceTree = "<group>"; };
+		0499AD4A230271F600E356A4 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0499AD4C2302762600E356A4 /* Gache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gache.swift; sourceTree = "<group>"; };
 		049C244A22F8026500FF3F0A /* JourTravaille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourTravaille.swift; sourceTree = "<group>"; };
 		049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoursTravaillesViewController.swift; sourceTree = "<group>"; };
 		049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoursTravaillesViewController.xib; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				04B7E27D22F6A69B005870FF /* Imprimerie.xcdatamodeld */,
 				0430003522F51A2800A54D6E /* MainWindow.swift */,
 				0430003F22F53B4200A54D6E /* OutlineView.swift */,
+				0499AD4A230271F600E356A4 /* Protocols.swift */,
 				047B029122FBEC510074585E /* Parametres */,
 				047B029222FBEC800074585E /* Personnes */,
 				047B029322FBEC9E0074585E /* Imprimerie */,
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				041DCC2322F6993300AB68A6 /* Consommable.swift */,
+				0499AD4C2302762600E356A4 /* Gache.swift */,
 				049C244A22F8026500FF3F0A /* JourTravaille.swift */,
 				0442B26B22F932660051D91B /* MasseSalariale.swift */,
 				04A9A29822F9498C001647EE /* Parution.swift */,
@@ -367,6 +373,7 @@
 				0430001F22F5131B00A54D6E /* ViewController.swift in Sources */,
 				041DCC2122F696F400AB68A6 /* ConsommablesViewController.swift in Sources */,
 				0442B26C22F932660051D91B /* MasseSalariale.swift in Sources */,
+				0499AD4D2302762600E356A4 /* Gache.swift in Sources */,
 				0495D42F22FA92B80026A088 /* Salarie.swift in Sources */,
 				0495D42922FA82170026A088 /* Fournisseur.swift in Sources */,
 				0430003E22F5381200A54D6E /* OutlineViewController.swift in Sources */,
@@ -385,6 +392,7 @@
 				041DCC2422F6993300AB68A6 /* Consommable.swift in Sources */,
 				047B029F22FC08240074585E /* EtatDeBesoin.swift in Sources */,
 				0495D42C22FA826A0026A088 /* FournisseursViewController.swift in Sources */,
+				0499AD4B230271F600E356A4 /* Protocols.swift in Sources */,
 				0430001D22F5131B00A54D6E /* AppDelegate.swift in Sources */,
 				041DCC1A22F6958100AB68A6 /* Client.swift in Sources */,
 				0495D43222FABB6C0026A088 /* SalariesViewController.swift in Sources */,

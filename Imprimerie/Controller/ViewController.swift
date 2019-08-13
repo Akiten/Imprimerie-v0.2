@@ -17,6 +17,7 @@ class ViewController: NSViewController {
   // MARK: - Init
   var section = [Section]()   // Sections outlineView
   var outlineViewSelectedName = ""    // Item selected name
+  var outlineViewSelectedIndex = 0    // Selected row
 
   // Views declaration for outlineView change row to update data
   var consommablesViewController = ConsommablesViewController()
@@ -42,6 +43,9 @@ class ViewController: NSViewController {
     outlineView.expandItem(nil, expandChildren: true)
     outlineView.selectRowIndexes(NSIndexSet(index: 1) as IndexSet, byExtendingSelection: false)
     outlineViewSelectedName = section[0].detail[0].name
+
+    // Delegates
+    consommablesViewController.delegate = self
   }
 
   // Window title

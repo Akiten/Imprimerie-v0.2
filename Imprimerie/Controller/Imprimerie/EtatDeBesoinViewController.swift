@@ -17,6 +17,7 @@ class EtatDeBesoinViewController: NSViewController {
   // Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
+  @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
 
   // textFields
   @IBOutlet weak var designationTextField: NSTextField!
@@ -28,27 +29,17 @@ class EtatDeBesoinViewController: NSViewController {
   @IBOutlet weak var commentaireTextField: NSTextField!
   @IBOutlet weak var dateDatePicker: NSDatePicker!
 
-  // Init datas
-  func initDataView() {
-    designationTextField.stringValue = ""
-    demandeurComboBox.stringValue = ""
-    mtDemandeTextField.stringValue = ""
-    mtDecaisseTextField.stringValue = ""
-    soldeTextField.stringValue = ""
-    commentaireTextField.stringValue = ""
-    dateDatePicker.locale = Locale(identifier: "FR_fr")
-    dateDatePicker.dateValue = Date()
-  }
-
   // Init class data
-  var etatsDeBesoins = EtatDeBesoin.all    // getDate from entity
+  var etatsDeBesoins = EtatDeBesoin.all    // Get data from entity
+  var dataInsert = false    // For Insert or Update data in entity Core Data
+  var oldDate = ""   // For update date field if necessary
+  var oldDesignation = ""   // For update designation field if necessary
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
       super.viewDidLoad()
       // Do view setup here.
   }
-
   override func viewWillAppear() {
     super.viewWillAppear()
 
@@ -59,8 +50,9 @@ class EtatDeBesoinViewController: NSViewController {
     // Load datas in tableView
     tableView.reloadData()
 
-    // Init datas
-    initDataView()
+    // Init date
+    dateDatePicker.locale = Locale(identifier: "fr-FR")
+    dateDatePicker.dateValue = Date()
   }
 
 }

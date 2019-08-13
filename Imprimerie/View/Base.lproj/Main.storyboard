@@ -93,7 +93,7 @@
                                         <menuItem title="Masse salariale" id="N7p-bw-Em2">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Item" id="jXJ-c6-mp0" userLabel="Parutions">
+                                        <menuItem title="Parutions" id="jXJ-c6-mp0" userLabel="Parutions">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>

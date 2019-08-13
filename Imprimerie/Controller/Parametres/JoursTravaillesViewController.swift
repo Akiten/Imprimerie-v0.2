@@ -17,7 +17,8 @@ class JoursTravaillesViewController: NSViewController {
   // Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
-
+  @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
+  
   // textFields
   @IBOutlet weak var anneeTextField: NSTextField!   // Unique
   @IBOutlet weak var nbJoursTextField: NSTextField!
@@ -26,18 +27,10 @@ class JoursTravaillesViewController: NSViewController {
   @IBOutlet weak var nbJoursTravaiilesTextField: NSTextField!   // Calculated field
   @IBOutlet weak var commentaireTextField: NSTextField!
 
-  // Init datas
-  func initDataView() {
-    anneeTextField.stringValue = MainWindow.stringYear
-    nbJoursTextField.stringValue = ""
-    nbJoursOuvresTextField.stringValue = ""
-    nbJoursFeriesTextField.stringValue = ""
-    nbJoursTravaiilesTextField.stringValue = ""
-    commentaireTextField.stringValue = ""
-  }
-
   // Init class data
-  var joursTravailles = JourTravaille.all    // getDate from entity
+  var joursTravailles = JourTravaille.all    // Get data from entity
+  var dataInsert = false    // For Insert or Update data in entity Core Data
+  var oldAnnee = ""   // For update annee field if necessary
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
@@ -53,9 +46,6 @@ class JoursTravaillesViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
-
-    // Init datas
-    initDataView()
   }
 
 }

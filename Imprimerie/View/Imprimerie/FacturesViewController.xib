@@ -15,6 +15,7 @@
                 <outlet property="importExportSegmentedControl" destination="ZrL-bw-RDY" id="F96-kl-50F"/>
                 <outlet property="montantTextField" destination="MdK-EI-hjN" id="XpX-UG-0PK"/>
                 <outlet property="reglementTextField" destination="qGq-LF-dpA" id="oEp-eI-w4j"/>
+                <outlet property="saveSegmentedControl" destination="aTm-vc-x9E" id="C3c-fk-XRT"/>
                 <outlet property="soldeTextField" destination="JdR-d4-Z8i" id="mYS-Mi-QCd"/>
                 <outlet property="tableView" destination="wP2-n5-PRx" id="aSl-cd-vsS"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -364,15 +365,15 @@
                     </tableHeaderView>
                 </scrollView>
                 <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-7Q-yEU">
-                    <rect key="frame" x="257" y="327" width="250" height="24"/>
+                    <rect key="frame" x="257" y="327" width="250" height="21"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="36" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vmx-r8-eTm">
-                            <rect key="frame" x="40" y="3" width="170" height="21"/>
+                            <rect key="frame" x="5" y="3" width="240" height="18"/>
                             <subviews>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x8d-s7-C4K">
-                                    <rect key="frame" x="-2" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="rEr-s8-Y0N">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="-1" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="rEr-s8-Y0N">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Ajouter" image="NSAddTemplate" width="32"/>
                                             <segment toolTip="Supprimer" image="NSRemoveTemplate" width="32" enabled="NO" tag="1"/>
@@ -380,12 +381,21 @@
                                     </segmentedCell>
                                 </segmentedControl>
                                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-bw-RDY">
-                                    <rect key="frame" x="101" y="-2" width="71" height="24"/>
-                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="PVU-Xl-EKe">
-                                        <font key="font" metaFont="system"/>
+                                    <rect key="frame" x="102" y="-1" width="69" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="PVU-Xl-EKe">
+                                        <font key="font" metaFont="cellTitle"/>
                                         <segments>
                                             <segment toolTip="Importer" image="NSTouchBarFolderMoveToTemplate" width="32"/>
                                             <segment toolTip="Exporter" image="NSTouchBarFolderCopyToTemplate" width="32" tag="1"/>
+                                        </segments>
+                                    </segmentedCell>
+                                </segmentedControl>
+                                <segmentedControl verticalHuggingPriority="750" verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="aTm-vc-x9E">
+                                    <rect key="frame" x="205" y="-1" width="36" height="20"/>
+                                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="momentary" id="yiw-A9-8n8">
+                                        <font key="font" metaFont="cellTitle"/>
+                                        <segments>
+                                            <segment toolTip="Sauvegarder" image="NSTouchBarSlideshowTemplate" width="32"/>
                                         </segments>
                                     </segmentedCell>
                                 </segmentedControl>
@@ -393,8 +403,10 @@
                             <visibilityPriorities>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
@@ -546,7 +558,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z9G-t9-S55">
+                                    <textField verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9G-t9-S55">
                                         <rect key="frame" x="10" y="21" width="230" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Commentaire" bezelStyle="round" id="kOn-mt-MUG">
                                             <font key="font" metaFont="smallSystem"/>
@@ -620,7 +632,7 @@
                         <rect key="frame" x="0.0" y="311" width="250" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="i9v-CH-dZH">
+                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="i9v-CH-dZH">
                         <rect key="frame" x="234" y="0.0" width="16" height="327"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -632,7 +644,7 @@
                 <constraint firstItem="Xc9-d7-1bl" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="RJv-Ll-h7w"/>
                 <constraint firstAttribute="trailing" secondItem="Xc9-d7-1bl" secondAttribute="trailing" constant="250" id="TP7-Vk-OAW"/>
                 <constraint firstAttribute="bottom" secondItem="zfS-Ua-Syf" secondAttribute="bottom" id="VnX-Sg-HdD"/>
-                <constraint firstItem="b7X-7Q-yEU" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="1" id="fpg-un-Jsf"/>
+                <constraint firstItem="b7X-7Q-yEU" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="4" id="fpg-un-Jsf"/>
                 <constraint firstItem="zfS-Ua-Syf" firstAttribute="leading" secondItem="Xc9-d7-1bl" secondAttribute="trailing" id="h5H-1Z-3to"/>
                 <constraint firstAttribute="trailing" secondItem="zfS-Ua-Syf" secondAttribute="trailing" id="kda-mb-xbt"/>
                 <constraint firstAttribute="trailing" secondItem="b7X-7Q-yEU" secondAttribute="trailing" id="kfI-wL-ENl"/>
@@ -647,5 +659,6 @@
         <image name="NSRemoveTemplate" width="11" height="11"/>
         <image name="NSTouchBarFolderCopyToTemplate" width="26" height="30"/>
         <image name="NSTouchBarFolderMoveToTemplate" width="22" height="30"/>
+        <image name="NSTouchBarSlideshowTemplate" width="22" height="30"/>
     </resources>
 </document>

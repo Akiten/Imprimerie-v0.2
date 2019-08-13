@@ -21,6 +21,7 @@
         <attribute name="article" attributeType="String" syncable="YES"/>
         <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="conditionnement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="designation" attributeType="String" syncable="YES"/>
         <attribute name="pxAchat" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pxRevient" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pxVente" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -52,6 +53,14 @@
         <attribute name="fournisseur" attributeType="String" syncable="YES"/>
         <attribute name="reglements" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="fournisseurCommandes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Commande" inverseName="commandeFournisseur" inverseEntity="Commande" syncable="YES"/>
+    </entity>
+    <entity name="Gache" representedClassName=".Gache" syncable="YES" codeGenerationType="category">
+        <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gache" attributeType="String" syncable="YES"/>
+        <attribute name="poids" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pxUnitaire" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quantite" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unite" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="JourTravaille" representedClassName=".JourTravaille" syncable="YES" codeGenerationType="category">
         <attribute name="annee" attributeType="String" minValueString="4" maxValueString="4" syncable="YES"/>
@@ -92,7 +101,7 @@
     <elements>
         <element name="Client" positionX="95.19140625" positionY="102.2734375" width="128" height="133"/>
         <element name="Commande" positionX="274.09765625" positionY="305.43359375" width="128" height="148"/>
-        <element name="Consommable" positionX="-55.10546875" positionY="96.328125" width="128" height="148"/>
+        <element name="Consommable" positionX="-55.10546875" positionY="96.328125" width="128" height="165"/>
         <element name="EtatDeBesoin" positionX="294.92578125" positionY="477.68359375" width="128" height="178"/>
         <element name="Facture" positionX="135.45703125" positionY="-174.7421875" width="128" height="150"/>
         <element name="Fournisseur" positionX="100.1328125" positionY="266.48828125" width="128" height="120"/>
@@ -100,5 +109,6 @@
         <element name="MasseSalariale" positionX="-54.41796875" positionY="271.93359375" width="128" height="90"/>
         <element name="Parution" positionX="262.6875" positionY="102" width="128" height="178"/>
         <element name="Salarie" positionX="91.97265625" positionY="446.83203125" width="128" height="208"/>
+        <element name="Gache" positionX="117" positionY="-27" width="128" height="135"/>
     </elements>
 </model>

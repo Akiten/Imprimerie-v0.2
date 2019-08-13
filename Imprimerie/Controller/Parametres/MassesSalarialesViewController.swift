@@ -17,7 +17,8 @@ class MassesSalarialesViewController: NSViewController {
   // Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
-  
+  @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
+
   // textFields
   @IBOutlet weak var anneeTextField: NSTextField!   // Unique
   @IBOutlet weak var mensuelleTextField: NSTextField!
@@ -27,26 +28,16 @@ class MassesSalarialesViewController: NSViewController {
   @IBOutlet weak var horaireTextField: NSTextField!
   @IBOutlet weak var commentaireTextField: NSTextField!
 
-  // Init datas
-  func initDataView() {
-    anneeTextField.stringValue = MainWindow.stringYear
-    mensuelleTextField.stringValue = ""
-    annuelleTextField.stringValue = ""
-    mensuelleMoyenneTextField.stringValue = ""
-    journaliereTextField.stringValue = ""
-    horaireTextField.stringValue = ""
-    commentaireTextField.stringValue = ""
-  }
-
   // Init class data
-  var massesSalariales = MasseSalariale.all    // getDate from entity
+  var massesSalariales = MasseSalariale.all    // Get date from entity
+  var dataInsert = false    // For Insert or Update data in entity Core Data
+  var oldAnnee = ""   // For update annee field if necessary
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do view setup here.
   }
-
   override func viewWillAppear() {
     super.viewWillAppear()
 
@@ -56,9 +47,6 @@ class MassesSalarialesViewController: NSViewController {
 
     // Load datas in tableView
     tableView.reloadData()
-
-    // Init datas
-    initDataView()
   }
 
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 struct MainWindow {
-  static let windowTitle = "Imprimerie v0.2.2"    // Window title
+  static let windowTitle = "Imprimerie v0.2.3"    // Window title
   static let currentMonth = Calendar.current.component(.month, from: Date())    // Current Month
   static let currentYear = Calendar.current.component(.year, from: Date())    // Current Year
 
@@ -43,4 +43,10 @@ private func getSalaireJournalier() -> Double {
     }
   }
   return salaire
+}
+
+// Disable all spaces and characters non numerics
+func componentsJoined (_ field: String) -> String {
+  let components = field.components(separatedBy: CharacterSet.decimalDigits.inverted)
+  return components.joined()
 }

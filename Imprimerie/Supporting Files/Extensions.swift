@@ -11,10 +11,17 @@ import Cocoa
 
 // MARK: - Message boxes
 // Alert OK
-func dialogOK (_ textMessage: String) {
+func alertDialogBoxOk (_ textMessage: String) {
   let alert = NSAlert()
   alert.messageText = textMessage
   alert.alertStyle = .warning
+  alert.addButton(withTitle: "OK")
+  alert.runModal()
+}
+func informationalDialogBoxOk (_ textMessage: String) {
+  let alert = NSAlert()
+  alert.messageText = textMessage
+  alert.alertStyle = .informational
   alert.addButton(withTitle: "OK")
   alert.runModal()
 }
@@ -29,7 +36,7 @@ extension Double {
   // To String
   func toStringWithoutDigit () -> String {
     let formatter = NumberFormatter()
-    formatter.locale = Locale(identifier: "FR_fr")
+    formatter.locale = Locale(identifier: "fr-FR")
     formatter.format = "# ###"
     formatter.numberStyle = .decimal
     formatter.zeroSymbol = ""
@@ -43,7 +50,7 @@ extension Date {
   // Year to string
   func yearToString () -> String {
     let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "FR_fr")
+    formatter.locale = Locale(identifier: "fr-FR")
     formatter.dateStyle = .short
     formatter.dateFormat = "yyyy"
     return formatter.string(from: self)
@@ -52,7 +59,7 @@ extension Date {
   // Month to string
   func monthToString () -> String {
     let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "FR_fr")
+    formatter.locale = Locale(identifier: "fr-FR")
     formatter.dateStyle = .short
     formatter.dateFormat = "MMMM"
     let stringMonth = formatter.string(from: self)
@@ -62,7 +69,7 @@ extension Date {
   // Date to string
   func dateToString() -> String {
     let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "FR_fr")
+    formatter.locale = Locale(identifier: "fr-FR")
     formatter.dateStyle = .short
     formatter.dateFormat = "dd/MM/yyyy"
     return formatter.string(from: self)
@@ -71,7 +78,7 @@ extension Date {
   // Time to string in 24 hour format
   func timeToString() -> String {
     let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "FR_fr")
+    formatter.locale = Locale(identifier: "fr-FR")
     formatter.dateStyle = .none
     formatter.dateFormat = "HH:mm"
     return formatter.string(from: self)

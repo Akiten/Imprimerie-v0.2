@@ -10,16 +10,18 @@ import Cocoa
 
 class ConsommablesViewController: NSViewController {
 
-  // MARK: - Outlets
-  // Views
+  // MARK: - Init Delegates
+  weak var delegate: updateOutlineView?
+
+  // MARK: - Init Views
   @IBOutlet weak var tableView: NSTableView!
 
-  // Controls
+  // MARK: - Init Controls
   @IBOutlet weak var addRemoveSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var importExportSegmentedControl: NSSegmentedControl!
   @IBOutlet weak var saveSegmentedControl: NSSegmentedControl!
-  
-  // textFields
+
+  // MARK: - Init textFields
   @IBOutlet weak var articleTextField: NSTextField!   // Unique
   @IBOutlet weak var uniteTextField: NSTextField!
   @IBOutlet weak var conditionnementTextField: NSTextField!
@@ -27,11 +29,13 @@ class ConsommablesViewController: NSViewController {
   @IBOutlet weak var pxRevientTextField: NSTextField!
   @IBOutlet weak var pxVenteTextField: NSTextField!
   @IBOutlet weak var commentaireTextField: NSTextField!
+  @IBOutlet weak var designationTextField: NSTextField!
 
-  // Init class data
-  var consommables = Consommable.all    // getDate from entity
+  // MARK: - Init vars
+  var consommables = Consommable.all    // Get data from entity
   var dataInsert = false    // For Insert or Update data in entity Core Data
   var oldArticle = ""   // For update article field if necessary
+  var selectedRow = 0   // Selected row for update fields
 
   // MARK: - View Controller functions
   override func viewDidLoad() {
@@ -40,7 +44,7 @@ class ConsommablesViewController: NSViewController {
   override func viewWillAppear() {
     super.viewWillAppear()
 
-    // Delegates
+    // tableView delegates
     tableView.dataSource = self
     tableView.delegate = self
 
@@ -53,47 +57,40 @@ class ConsommablesViewController: NSViewController {
     let segmentedControl = sender as! NSSegmentedControl
     let index = segmentedControl.selectedSegment
 
-    // Insert new row
+    // Insert new row and select it
     if index == 0 {
       let insertionIndex = consommables.count
       tableView.insertRows(at: IndexSet (integer: insertionIndex), withAnimation: .effectFade)
       tableView.selectRowIndexes(IndexSet (integer: insertionIndex), byExtendingSelection: false)
-      dataInsert = true    // For Insert
+      dataInsert = true    // For insert
     }
   }
 
   @IBAction func saveAction(_ sender: Any) {
-
+    var messageAlert = ""
     // Save data in Core Data entity
     let article = articleTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
     let unite = uniteTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
     let conditionnement = conditionnementTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
     let commentaire = commentaireTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+    let pxAchat = componentsJoined (pxAchatTextField.stringValue)
+    let pxRevient = componentsJoined (pxRevientTextField.stringValue)
+    let pxVente = componentsJoined (pxVenteTextField.stringValue)
+    let designation = designationTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
 
-    var pxAchat = pxAchatTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
-    var components = pxAchat.components(separatedBy: CharacterSet.decimalDigits.inverted)
-    pxAchat = components.joined()
-    if pxAchat.isEmpty { pxAchat = "0.0" }
-
-    var pxRevient = pxRevientTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
-    components = pxRevient.components(separatedBy: CharacterSet.decimalDigits.inverted)
-    pxRevient = components.joined()
-    if pxRevient.isEmpty { pxRevient = "0.0" }
-
-    var pxVente = pxVenteTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
-    components = pxVente.components(separatedBy: CharacterSet.decimalDigits.inverted)
-    pxVente = components.joined()
-    if pxVente.isEmpty { pxVente = "0.0" }
+    pxAchatTextField.stringValue = pxAchat
+    pxRevientTextField.stringValue = pxRevient
+    pxVenteTextField.stringValue = pxVente
 
     // Verify nil fields
-    if article.isEmpty {
-      dialogOK ("Le champ \"Article\" est obligatoires !")
-      return
+    if article.isEmpty { messageAlert = "Le champ \"Article\" est obligatoire !" }
+    if designation.isEmpty {
+      if messageAlert != "" { messageAlert += "\n"}
+      messageAlert += "Le champ \"Désignation\" est obligatoire !"
     }
 
-    // Verify numeric fields
-    if pxAchat.isDouble == false || pxRevient.isDouble == false || pxVente.isDouble == false {
-      dialogOK ("Les champs \"Prix d'achat\", \"Prix de revient\" & \"Prix de vente\" ne doivent contenir que des chiffres !")
+    if messageAlert != "" {
+      alertDialogBoxOk (messageAlert)
       return
     }
 
@@ -107,8 +104,8 @@ class ConsommablesViewController: NSViewController {
       consommable.pxRevient = Double(pxRevient) ?? 0.0
       consommable.pxVente = Double(pxVente) ?? 0.0
       consommable.commentaire = commentaire
-      try? AppDelegate.viewContext.save()
-      dataInsert = false
+      consommable.designation = designation
+//      dataInsert = false
     } else {
       let request: NSFetchRequest<Consommable> = Consommable.fetchRequest()
       request.predicate = NSPredicate(format: "article = %@", oldArticle)
@@ -121,13 +118,20 @@ class ConsommablesViewController: NSViewController {
         consommable?[0].pxRevient = Double(pxRevient) ?? 0.0
         consommable?[0].pxVente = Double(pxVente) ?? 0.0
         consommable?[0].commentaire = commentaire
-        try? AppDelegate.viewContext.save()
+        consommable?[0].designation = designation
       }
     }
 
-    // Reload Data
-    consommables = Consommable.all
+    // Save & reload Data
+    try? AppDelegate.viewContext.save()
+    consommables = Consommable.all    // Reload all datas because of sort
     tableView.reloadData()
+
+    // Sending new count after insert and delegate to outlineView to refresh inline Button
+    if dataInsert {
+      delegate?.updateAfterInsertData()
+      dataInsert = false
+    }
   }
 }
 
@@ -154,6 +158,7 @@ extension ConsommablesViewController: NSTableViewDelegate {
       case "pxRevient": cell.textField?.stringValue = consommables[row].pxRevient.toStringWithoutDigit()
       case "pxVente": cell.textField?.stringValue = consommables[row].pxVente.toStringWithoutDigit()
       case "commentaire": cell.textField?.stringValue = consommables[row].commentaire ?? ""
+      case "designation": cell.textField?.stringValue = consommables[row].designation ?? ""
       default: cell.textField?.stringValue = ""
       }
       return cell
@@ -163,16 +168,17 @@ extension ConsommablesViewController: NSTableViewDelegate {
 
   // tableView selection changed
   func tableViewSelectionDidChange(_ notification: Notification) {
-    let selected = tableView.selectedRow
-    if selected < consommables.count && selected >= 0 {
-      articleTextField.stringValue = consommables[selected].article ?? ""
-      oldArticle = consommables[selected].article ?? ""
-      uniteTextField.stringValue = consommables[selected].unite ?? ""
-      conditionnementTextField.stringValue = consommables[selected].conditionnement ?? ""
-      pxAchatTextField.stringValue = consommables[selected].pxAchat.toStringWithoutDigit()
-      pxRevientTextField.stringValue = consommables[selected].pxRevient.toStringWithoutDigit()
-      pxVenteTextField.stringValue = consommables[selected].pxVente.toStringWithoutDigit()
-      commentaireTextField.stringValue = consommables[selected].commentaire ?? ""
+    selectedRow = tableView.selectedRow
+    if selectedRow < consommables.count && selectedRow >= 0 {
+      oldArticle = consommables[selectedRow].article ?? ""
+      articleTextField.stringValue = consommables[selectedRow].article ?? ""
+      uniteTextField.stringValue = consommables[selectedRow].unite ?? ""
+      conditionnementTextField.stringValue = consommables[selectedRow].conditionnement ?? ""
+      pxAchatTextField.stringValue = consommables[selectedRow].pxAchat.toStringWithoutDigit()
+      pxRevientTextField.stringValue = consommables[selectedRow].pxRevient.toStringWithoutDigit()
+      pxVenteTextField.stringValue = consommables[selectedRow].pxVente.toStringWithoutDigit()
+      commentaireTextField.stringValue = consommables[selectedRow].commentaire ?? ""
+      designationTextField.stringValue = consommables[selectedRow].designation ?? ""
     } else {
       articleTextField.stringValue = ""
       uniteTextField.stringValue = ""
@@ -181,6 +187,7 @@ extension ConsommablesViewController: NSTableViewDelegate {
       pxRevientTextField.stringValue = ""
       pxVenteTextField.stringValue = ""
       commentaireTextField.stringValue = ""
+      designationTextField.stringValue = ""
     }
   }
 
