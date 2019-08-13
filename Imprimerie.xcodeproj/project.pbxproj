@@ -41,6 +41,8 @@
 		0495D43322FABB6C0026A088 /* SalariesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495D43122FABB6C0026A088 /* SalariesViewController.xib */; };
 		0499AD4B230271F600E356A4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499AD4A230271F600E356A4 /* Protocols.swift */; };
 		0499AD4D2302762600E356A4 /* Gache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499AD4C2302762600E356A4 /* Gache.swift */; };
+		0499AD5023027A6E00E356A4 /* GachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499AD4E23027A6E00E356A4 /* GachesViewController.swift */; };
+		0499AD5123027A6E00E356A4 /* GachesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0499AD4F23027A6E00E356A4 /* GachesViewController.xib */; };
 		049C244B22F8026500FF3F0A /* JourTravaille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C244A22F8026500FF3F0A /* JourTravaille.swift */; };
 		049C244E22F8032400FF3F0A /* JoursTravaillesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */; };
 		049C244F22F8032400FF3F0A /* JoursTravaillesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */; };
@@ -89,6 +91,8 @@
 		0495D43122FABB6C0026A088 /* SalariesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalariesViewController.xib; sourceTree = "<group>"; };
 		0499AD4A230271F600E356A4 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		0499AD4C2302762600E356A4 /* Gache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gache.swift; sourceTree = "<group>"; };
+		0499AD4E23027A6E00E356A4 /* GachesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachesViewController.swift; sourceTree = "<group>"; };
+		0499AD4F23027A6E00E356A4 /* GachesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GachesViewController.xib; sourceTree = "<group>"; };
 		049C244A22F8026500FF3F0A /* JourTravaille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourTravaille.swift; sourceTree = "<group>"; };
 		049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoursTravaillesViewController.swift; sourceTree = "<group>"; };
 		049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoursTravaillesViewController.xib; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				041DCC2022F696F400AB68A6 /* ConsommablesViewController.xib */,
+				0499AD4F23027A6E00E356A4 /* GachesViewController.xib */,
 				049C244D22F8032400FF3F0A /* JoursTravaillesViewController.xib */,
 				0442B26E22F934E70051D91B /* MassesSalarialesViewController.xib */,
 				04A9A29B22F949D5001647EE /* ParutionsViewController.xib */,
@@ -275,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				041DCC1F22F696F400AB68A6 /* ConsommablesViewController.swift */,
+				0499AD4E23027A6E00E356A4 /* GachesViewController.swift */,
 				049C244C22F8032400FF3F0A /* JoursTravaillesViewController.swift */,
 				0442B26D22F934E70051D91B /* MassesSalarialesViewController.swift */,
 				04A9A29A22F949D5001647EE /* ParutionsViewController.swift */,
@@ -356,6 +362,7 @@
 				0430002722F5131B00A54D6E /* Main.storyboard in Resources */,
 				0495D42D22FA826A0026A088 /* FournisseursViewController.xib in Resources */,
 				049C244F22F8032400FF3F0A /* JoursTravaillesViewController.xib in Resources */,
+				0499AD5123027A6E00E356A4 /* GachesViewController.xib in Resources */,
 				047B02A322FC0C730074585E /* EtatDeBesoinViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +400,7 @@
 				047B029F22FC08240074585E /* EtatDeBesoin.swift in Sources */,
 				0495D42C22FA826A0026A088 /* FournisseursViewController.swift in Sources */,
 				0499AD4B230271F600E356A4 /* Protocols.swift in Sources */,
+				0499AD5023027A6E00E356A4 /* GachesViewController.swift in Sources */,
 				0430001D22F5131B00A54D6E /* AppDelegate.swift in Sources */,
 				041DCC1A22F6958100AB68A6 /* Client.swift in Sources */,
 				0495D43222FABB6C0026A088 /* SalariesViewController.swift in Sources */,

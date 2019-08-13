@@ -10,6 +10,9 @@ import Cocoa
 
 class ParutionsViewController: NSViewController {
 
+  // MARK: - Init Delegates
+  weak var delegate: updateOutlineView?
+
   // MARK: - Outlets
   // Views
   @IBOutlet weak var tableView: NSTableView!

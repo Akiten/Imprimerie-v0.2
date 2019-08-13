@@ -13,7 +13,7 @@ class Gache: NSManagedObject {
   // Retrieve data
   static var all: [Gache] {
     let request: NSFetchRequest<Gache> = Gache.fetchRequest()
-    request.sortDescriptors = [NSSortDescriptor(key: "gache", ascending: true)]
+    request.sortDescriptors = [NSSortDescriptor(key: "produit", ascending: true)]
     guard let gaches = try? AppDelegate.viewContext.fetch(request) else { return [] }
     return gaches
   }

@@ -56,10 +56,8 @@
     </entity>
     <entity name="Gache" representedClassName=".Gache" syncable="YES" codeGenerationType="category">
         <attribute name="commentaire" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="gache" attributeType="String" syncable="YES"/>
-        <attribute name="poids" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="pxUnitaire" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="quantite" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="produit" attributeType="String" syncable="YES"/>
+        <attribute name="pxVente" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="unite" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="JourTravaille" representedClassName=".JourTravaille" syncable="YES" codeGenerationType="category">
@@ -109,6 +107,6 @@
         <element name="MasseSalariale" positionX="-54.41796875" positionY="271.93359375" width="128" height="90"/>
         <element name="Parution" positionX="262.6875" positionY="102" width="128" height="178"/>
         <element name="Salarie" positionX="91.97265625" positionY="446.83203125" width="128" height="208"/>
-        <element name="Gache" positionX="117" positionY="-27" width="128" height="135"/>
+        <element name="Gache" positionX="117" positionY="-27" width="128" height="105"/>
     </elements>
 </model>

@@ -66,6 +66,7 @@ class ConsommablesViewController: NSViewController {
     }
   }
 
+  // Update datas
   @IBAction func saveAction(_ sender: Any) {
     var messageAlert = ""
     // Save data in Core Data entity

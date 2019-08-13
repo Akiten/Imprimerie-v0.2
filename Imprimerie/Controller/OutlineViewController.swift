@@ -93,6 +93,7 @@ extension ViewController: NSOutlineViewDelegate {
       dataCellView?.inlineButton.title = detail.count
       switch detail.name {
       case "Consommables": dataCellView?.inlineButton.title = String (Consommable.count)
+      case "Gâches": dataCellView?.inlineButton.title = String (Gache.count)
       case "Jours travaillés": dataCellView?.inlineButton.title = String (JourTravaille.count)
       case "Masse salariale": dataCellView?.inlineButton.title = String (MasseSalariale.count)
       case "Parutions": dataCellView?.inlineButton.title = String (Parution.count)
@@ -126,6 +127,7 @@ extension ViewController: NSOutlineViewDelegate {
     var vc = NSView()
     switch outlineViewSelectedName {
     case "Consommables": vc = consommablesViewController.view
+    case "Gâches": vc = gachesViewController.view
     case "Jours travaillés": vc = joursTravaillesViewController.view
     case "Masse salariale": vc = massesSalarialesViewController.view
     case "Parutions": vc = parutionsViewController.view

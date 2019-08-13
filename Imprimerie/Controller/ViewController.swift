@@ -21,6 +21,7 @@ class ViewController: NSViewController {
 
   // Views declaration for outlineView change row to update data
   var consommablesViewController = ConsommablesViewController()
+  var gachesViewController = GachesViewController()
   var joursTravaillesViewController = JoursTravaillesViewController()
   var massesSalarialesViewController = MassesSalarialesViewController()
   var parutionsViewController = ParutionsViewController()
@@ -46,6 +47,17 @@ class ViewController: NSViewController {
 
     // Delegates
     consommablesViewController.delegate = self
+    gachesViewController.delegate = self
+//    matieresPremieresViewController.delegate = sel
+    joursTravaillesViewController.delegate = self
+    massesSalarialesViewController.delegate = self
+    parutionsViewController.delegate = self
+    clientsViewController.delegate = self
+    fournisseursViewController.delegate = self
+    salariesViewController.delegate = self
+    commandesViewController.delegate = self
+    etatsDeBesoinsViewController.delegate = self
+    facturesViewController.delegate = self
   }
 
   // Window title

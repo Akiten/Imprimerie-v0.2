@@ -9,7 +9,7 @@
 import Foundation
 
 struct MainWindow {
-  static let windowTitle = "Imprimerie v0.2.3"    // Window title
+  static let windowTitle = "Imprimerie v0.2.4"    // Window title
   static let currentMonth = Calendar.current.component(.month, from: Date())    // Current Month
   static let currentYear = Calendar.current.component(.year, from: Date())    // Current Year
 
